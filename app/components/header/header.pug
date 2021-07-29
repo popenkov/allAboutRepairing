@@ -6,26 +6,28 @@ header.header
                 span.header__logo--blue &nbsp;ремонт
 
             .header__location 
-                span.header__location-img 
                 +svg('map-pin') 
                 span.header__location-city Санкт-Петербург
 
             .header__search-container
                 input.header__search-input(type='text' placeholder='Поиск...')
+                +svg('search')
 
-            .header__working-plan
-                span.header__working-plan-img 
+            .header__link-item.header__working-plan(href="#" target="_blank")
+                +svg('plan')
                 span.header__working-plan-title План работ
 
-            .header__favorites
-                span.header__favorites-img 
+            .header__link-item.header__favorites(href="#" target="_blank")
+                +svg('heart-stroke')
                 span.header__favorites-title Избранное
 
             button.header__log-in-btn Войти
             
 
         .header__navigation-container
-            button.header__navigation-hamburer-btn Каталог
+            button.header__navigation-hamburer-btn 
+                +svg('grid-fill') 
+                .span Каталог
             navigation.header__navigation.navigation
                 .navigation__item Кухня
                 .navigation__item Прихожая

@@ -13,14 +13,12 @@
 
         &-top{
             display: flex;
-            align-items: center
+            align-items: center;
+            padding: 14px 0px;
+            border-bottom: 1px solid $grey-border;
         }
 
 
-        &-bottom {
-            display: flex;
-            align-items: center
-        }
     }
 
     &__logo{
@@ -29,6 +27,30 @@
 
         &--blue {
             color: $blue;
+        }
+    }
+
+
+    &__social-networks-container {
+        margin-left: auto;
+
+        .footer__social-img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+
+
+
+    &__container-bottom {
+        display: flex;
+        align-items: center;
+        padding: 14px 0px;
+        
+        .footer__copyright {
+            @include body-regular;
+            color: $grey;
         }
     }
 

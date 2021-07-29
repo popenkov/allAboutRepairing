@@ -19,25 +19,160 @@
 
         &-top {
             display: flex;
-            align-items: center
+            align-items: center;
+
+            padding: 14px 0px;
+            border-bottom: 1px solid $grey-border;
         }
+
     }
 
     &__logo{
         @include header-1;
         text-transform: uppercase;
+        margin-right: 19px;
 
         &--blue {
             color: $blue;
         }
     }
 
+    &__location {
+        .map-pin {
+            width: 20px;
+            height: 20px;
+        }
+
+        &-city {
+            @include body-regular;
+        }
+    }
+
+    &__search-container {
+        margin-left: auto;
+        margin-right: 23px;
+        position: relative;
+
+        .header__search-input {
+            padding: 12px;
+            padding-right: 40px;
+            height: 40px;
+            width: 260px;
+
+            border: 1px solid $grey-border;
+            box-sizing: border-box;
+            border-radius: 6px;
+        }
+
+        svg {
+            position: absolute;
+
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    &__link-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 25px;
+
+
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+
+        color: #111111;
+
+
+        & svg {
+            width: 20px;
+            height: 20px;
+            stroke: $black;
+        }
+
+    }
+
+
+    &__log-in-btn {
+        width: 110px;
+        height: 40px;
+        background-color: transparent;
+        border: 1px solid $blue;
+        box-sizing: border-box;
+        border-radius: 6px;
+    }
+
+    &__navigation-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 7px 0;
+    }
+
+    &__navigation-hamburer-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 112px;
+        height: 36px;
+        margin-right: 47px;
+
+        background: $blue;
+        border: none;
+        border-radius: 6px;
+
+
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+
+        color: $white;
+        fill: $white;
+
+        & svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
 
 
     .navigation {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: flex-start;
+
+
+        &__item {
+            @include subheader;
+            position: relative;
+            margin-right: 49px;
+            cursor: pointer;
+
+
+            &:hover::after {
+                content: '';
+                width: 30px;
+                width: 100%;
+                height: 3px;
+                background-color: $blue;
+
+                position: absolute;
+                bottom: -16px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     }
 
 }
