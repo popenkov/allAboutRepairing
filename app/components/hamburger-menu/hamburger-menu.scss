@@ -1,0 +1,22 @@
+
+.hamburger {
+    max-width: 1312px;
+    margin: 0 auto;
+    display: flex;
+    .hamburger__left-menu {
+        .swiper-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .swiper-slide {
+                width: 100px;
+                height: auto;
+
+                &:hover {
+                    background-color: $blue;
+                }
+            }
+        }
+    }
+}
