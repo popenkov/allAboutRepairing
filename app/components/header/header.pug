@@ -1,10 +1,36 @@
 header.header
-    .container 
-        .header__inner
-            .header__top-container
-                a.header__logo(href="index.html") 
-                    span Про
-                    span.header__logo--blue ремонт
-                .header__city-container
-            .header__navigation-container
-                a.menu-top__about О&nbsp;проекте
+    .header__container 
+        .header__container-top
+            a.header__logo(href="index.html") 
+                span Про
+                span.header__logo--blue &nbsp;ремонт
+
+            .header__location 
+                span.header__location-img 
+                +svg('map-pin') 
+                span.header__location-city Санкт-Петербург
+
+            .header__search-container
+                input.header__search-input(type='text' placeholder='Поиск...')
+
+            .header__working-plan
+                span.header__working-plan-img 
+                span.header__working-plan-title План работ
+
+            .header__favorites
+                span.header__favorites-img 
+                span.header__favorites-title Избранное
+
+            button.header__log-in-btn Войти
+            
+
+        .header__navigation-container
+            button.header__navigation-hamburer-btn Каталог
+            navigation.header__navigation.navigation
+                .navigation__item Кухня
+                .navigation__item Прихожая
+                .navigation__item Ванная
+                .navigation__item Гостиная
+                .navigation__item Спальня
+
+            

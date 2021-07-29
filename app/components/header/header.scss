@@ -5,27 +5,39 @@
 
 .header{
     width: 100%;
+    background: $white;
+    padding: 0 64px;
 
-
-
-
-    &__container{
-        width: 1312px;
+    &__container {
+        max-width: 1312px;
+        margin: 0 auto;
         box-sizing: border-box;
-        padding: 0 64px;
-        
         border: 1px solid black;
-    
         display: flex;
         flex-direction: column;
 
-    }
-    &__logo{
-        width: 30%;
-        display: block;
-        &-img{
-            width: 100%;
+
+        &-top {
+            display: flex;
+            align-items: center
         }
+    }
+
+    &__logo{
+        @include header-1;
+        text-transform: uppercase;
+
+        &--blue {
+            color: $blue;
+        }
+    }
+
+
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
     }
 
 }
