@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //========================================
 
     // = '../components/header/header.js'
+    import '../components/hamburger-menu/hamburger-menu.js';
 
     //========================================
     //=======|   HELPERS

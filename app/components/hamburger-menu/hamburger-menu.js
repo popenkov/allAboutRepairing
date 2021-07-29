@@ -37,12 +37,7 @@ const leftMenuSwiper = new Swiper('.hamburger__left-menu', {
 
 	const galleryRight = new Swiper('.hamburger__right-menu', {
 	  
-	 /*  slidesPerView: 1, */
-	  navigation: {
-	    prevEl:'.item-page__gallery-btn-next',
-	    nextEl: '.item-page__gallery-btn-prev',
-	     
-	  },
+	  slidesPerView: 1,
 	   loop: true,
 	   thumbs: {
 	    swiper: leftMenuSwiper,
