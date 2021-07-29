@@ -1,11 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    
     //========================================
     //=======|   IMPORTS
     //========================================
-
-    // = '../components/header/header.js'
-    import '../components/hamburger-menu/hamburger-menu.js';
+    //= ../components/hamburger-menu/hamburger-menu.js
+    //= ../components/header/header.js
+    
 
     //========================================
     //=======|   HELPERS

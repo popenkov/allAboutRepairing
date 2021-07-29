@@ -1,7 +1,4 @@
-import SwiperCore, { Navigation, Pagination } from 'swiper/core';
-SwiperCore.use([Navigation, Pagination]);
-import 'swiper/swiper-bundle.css';
-
+alert(123)
 
 const leftMenuSwiper = new Swiper('.hamburger__left-menu', {
 	/*   spaceBetween: 10, */
@@ -35,9 +32,10 @@ const leftMenuSwiper = new Swiper('.hamburger__left-menu', {
 	});
 	
 
-	const galleryRight = new Swiper('.hamburger__right-menu', {
+	const rightMenuSwiper = new Swiper('.hamburger__right-menu', {
 	  
 	  slidesPerView: 1,
+	  direction: 'vertical',
 	   loop: true,
 	   thumbs: {
 	    swiper: leftMenuSwiper,
