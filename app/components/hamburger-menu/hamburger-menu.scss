@@ -4,19 +4,103 @@
     margin: 0 auto;
     display: flex;
     .hamburger__left-menu {
+        height: 636px;
+        width: 261px;
+        padding: 17px 3px;
+        border-right: 1px solid $grey;
         .swiper-wrapper {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
 
             .swiper-slide {
-                width: 100px;
+                width: 94%;
+                border-radius: 6px;
+                cursor: pointer;
                 height: auto;
+                padding: 10px;
 
                 &:hover {
-                    background-color: $blue;
+                    color: $blue;
+                    background-color: $light-blue;
                 }
+
+                &:active {
+                    color: $blue;
+                    background-color: $light-blue;
+                }
+            }
+            
+            .swiper-slide-active {
+                color: $blue;
+                background-color: $light-blue;
+            }
+    
+        }
+    }
+
+    .hamburger__right-menu {
+        max-height: 100%;
+        min-height: 636px;
+        width: 80%;
+        padding-left: 44px;
+        padding-top: 24px;
+
+
+        .swiper-slide {
+            min-height: 636px; 
+            height: 636px;
+
+            display: block;
+        }
+
+        .hamburger__screen-list {
+            padding-bottom: 33px;
+        }
+
+        .hamburger__screen-list-container {
+            display: flex
+        }
+
+        .hamburger__screen-title {
+            @include header-3;
+            padding-bottom: 16px;
+        }
+
+        .swiper-slide-title-link {
+            display: block;
+            padding-bottom: 7px;
+
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .hamburger__screen-list-item {
+            width: 241px;
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 10px;
+            margin-left: -10px;
+
+
+
+            @include body-regular;
+
+            &:hover {
+                color: $blue;
+                background-color: $light-blue;
             }
         }
     }
+
+
+
+.swiper-container {
+    margin: 0;
+    overflow: hidden;
+    z-index: 1;
+}
 }
