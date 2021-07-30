@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //========================================
     //= ../components/hamburger-menu/hamburger-menu.js
     //= ../components/main-page/main-slider/main-slider.js
+    //= ../components/main-page/pop-works/pop-works.js
     //= ../components/header/header.js
     
 

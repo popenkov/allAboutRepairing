@@ -1,14 +1,13 @@
 .main__slider
   .swiper-container.main__slider-swiper
     .main__slider-buttons
+      .main-slider-button.main__slider-button-prev
+          +svg('chevron-left', ' main__slider-button-svg')
+      .main-slider-button.main__slider-button-next
+          +svg('chevron-right', ' main__slider-button-svg')
     .main__slider-text
       p.main__slider-text--bold Планируйте ремонт самостоятельно
       p.main__slider-text--regular Сотни видов работ с подробными инструкциями и рассчетом примерной стоимости
-      
-    .main-slider-button.main__slider-button-prev
-        +svg('chevron-left', ' main__slider-button-svg')
-    .main-slider-button.main__slider-button-next
-        +svg('chevron-right', ' main__slider-button-svg')
 
     .swiper-wrapper
       .swiper-slide
