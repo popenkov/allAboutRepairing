@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //=======|   IMPORTS
     //========================================
     //= ../components/hamburger-menu/hamburger-menu.js
+    //= ../components/main-page/main-slider/main-slider.js
     //= ../components/header/header.js
     
 

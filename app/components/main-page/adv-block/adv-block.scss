@@ -1,0 +1,21 @@
+.adv__place {
+    max-width: 1180px;
+    height: 90px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: $light-grey;
+    border: 1px solid $grey-border;
+    border-radius: 8px;
+
+
+    .adv__place-text {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: $grey;
+    }
+}

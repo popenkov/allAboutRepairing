@@ -25,16 +25,42 @@
                     background-color: $light-blue;
                 }
 
+                &:hover .chevron-right {
+                    stroke: $blue;
+                }
+
+                &:active .chevron-right {
+                    stroke: $blue;
+                }
+
+
                 &:active {
                     color: $blue;
                     background-color: $light-blue;
                 }
+
+
             }
             
             .swiper-slide-active {
                 color: $blue;
                 background-color: $light-blue;
+
+                .chevron-right {
+                    stroke: $blue;
+                }
+
             }
+
+            .chevron-right {
+                position: absolute;
+                right: 9px;
+                width: 20px;
+                height: 20px;
+                stroke: $grey;
+
+            }
+                
     
         }
     }
@@ -48,11 +74,8 @@
 
 
         .swiper-slide {
-  /*           min-height: 636px; 
-            height: 636px; */
-
             display: block;
-            overflow: scroll;
+            overflow: auto;
         }
 
         .hamburger__screen-list {
