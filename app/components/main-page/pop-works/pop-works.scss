@@ -1,12 +1,13 @@
 .pop-works {
 
     width: 100%;
-.pop-works-container {
-    margin: 0 auto;
-    max-width: 1180px;
-    /* height: 323px; */
-    height: 383px;
-    position: relative;
+
+    .pop-works-container {
+        margin: 0 auto;
+        max-width: 1180px;
+        /* height: 323px; */
+        height: 383px;
+        position: relative;
 
     .swiper-slide {
         height: 323px;
@@ -38,9 +39,6 @@
         border-radius: 22px;
     }
 
-    &:hover .pop-works__slider-button {
-        display: flex;
-    }
 
     .pop-works__slider-button-prev {
         left: -54px;
@@ -166,4 +164,8 @@
     }
 }
 
+}
+
+.pop-works:hover .pop-works__slider-button {
+    display: flex;
 }

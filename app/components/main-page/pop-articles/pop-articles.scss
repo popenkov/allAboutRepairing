@@ -1,0 +1,45 @@
+.pop-articles {
+    width: 100%;
+    .pop-articles__container {
+        margin: 0 auto;
+        max-width: 1180px;
+        position: relative;
+    }
+
+    .pop-articles__title {
+        @include header-3;
+        margin-top: 47px;
+        margin-bottom: 23px;
+
+    }
+
+    .pop-articles__item {
+        height: 331px;
+        background-color: #F5F5F5;
+
+
+        border: 1px solid #E0E0E0;
+        box-sizing: border-box;
+        border-radius: 8px;
+
+        
+    }
+    .pop-articles__item--wide {
+        max-width: 571px;
+
+        
+        .pop-articles__image-wide {
+            width: 50%;
+            
+            background-image: url('../../../assets/images/Rectangle 6.png');
+            background: linear-gradient(90.01deg, rgba(245, 245, 245, 0) 50.21%, #F5F5F5 99.99%);
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+        }
+        .pop-articles__text-container {
+            width: 50%;
+        }
+    }
+
+}
