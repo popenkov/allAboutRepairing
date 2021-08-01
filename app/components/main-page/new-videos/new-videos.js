@@ -1,7 +1,7 @@
 const newVideosSwiper = new Swiper('.new-videos__slider-swiper', {
     // Optional parameters
     direction: 'horizontal',
-    slidesPerView: 3,
+    slidesPerView: 4,
     loop: true,
     spaceBetween: 24,
   

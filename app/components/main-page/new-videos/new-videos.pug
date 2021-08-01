@@ -11,13 +11,24 @@
 
             .swiper-wrapper
                 .swiper-slide
-                    a.new-videos__item
+                    .new-videos__item
                         a.new-videos__add-to-fav(href="#")
-                            +svg('heart', ' pop-articles__fav-icon')
-                        img.new-videos__item-photo(src="../../assets/images/Rectangle 5.png")
+                            +svg('heart', ' new-videos__fav-icon')
+                        a.new-videos__link-to-video(href="#")
+                            img.new-videos__item-photo(src="../../assets/images/Rectangle 5.png")
+                            .new-videos__play-btn
+                                +svg('youtube', ' new-videos__youtube-icon')
                         .new-videos__item-container
-                            h3.new-videos__item-title Ручное оштукатуривание стен из газобетона
-                            .new-videos__item-description
+                            h3.new-videos__item-title Обзор технологий 
+                                br 
+                                | нанесения
+                            .new-videos__likeNviews 
+                                .new-videos__likes
+                                    +svg('heart-fill', ' new-videos__like-icon')
+                                    span.new-videos__likes-number 200
+                                .new-videos__views
+                                    +svg('eye-fill', ' new-videos__views-icon')
+                                    span.new-videos__views-number 1 264
 
 
 

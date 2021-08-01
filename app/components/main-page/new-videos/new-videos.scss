@@ -5,7 +5,6 @@
     .new-videos__container {
         margin: 0 auto;
         max-width: 1180px;
-        /* height: 323px; */
         height: 383px;
         position: relative;
 
@@ -16,8 +15,7 @@
     .new-videos__title {
         @include header-3;
         margin-top: 47px;
-        margin-bottom: 23px;
-
+        margin-bottom: 25px;
     }
 
     .new-videos__slider-button {
@@ -32,7 +30,7 @@
 
         position: absolute;
         z-index: 2;
-        top: 196px;
+        top: 160px;
         /* item hover */
 
         box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
@@ -64,101 +62,117 @@
         flex-direction: column;
         
 
-        .new-videos__working-plan {
+
+        .new-videos__add-to-fav {
             position: absolute;
-            right: 47px;
-            top: 7px;
+            z-index: 1;
+            right: 1px;
+            top: 1px;
             width: 32px;
             height: 32px;
             background: rgba(17, 17, 17, .5);
             border-radius: 4px;
 
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: center;
+
 
             stroke: $white;
         }
 
-        .new-videos__favorites {
-            position: absolute;
-            right: 11px;
-            top: 7px;
-            width: 32px;
-            height: 32px;
-            background: rgba(17, 17, 17, .5);
-            border-radius: 4px;
-
+        &:hover .new-videos__add-to-fav {
             display: flex;
-            align-items: center;
-            justify-content: center;
-
-
-            stroke: $white;
         }
         
         .new-videos__item-photo {
             width: 100%;
             height: 171px;
-            object-fit: contain;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            border-radius: 8px;
         }
+
+        .new-videos__link-to-video {
+            position: relative;
+
+            .new-videos__play-btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+
+                .new-videos__youtube-icon {
+                    width: 48px;
+                    height: 36px;
+                    left: 0px;
+                    top: 0px;
+
+
+                    background: rgba(17, 17, 17, .5);
+                    border-radius: 6px;
+
+                    &:hover {
+                        background: #0A9CE5; 
+                    }
+                }
+            }
+        }
+        
 
 
         .new-videos__item-container {
-            padding: 16px;
-            border: 1px solid #E0E0E0;
-            border-radius: 0px 0px 8px 8px;
-            flex-grow: 1;
+
             display: flex;
             flex-direction: column;
 
 
             .new-videos__item-title {
                 @include header-4;
-                padding-bottom: 6px;
+                padding-top: 15px;
+                padding-bottom: 8px;
             }
 
-            .new-videos__item-sections {
-                @include body-regular;
-                line-height: 14px;
-                color: $grey;
-                text-transform: uppercase;
-            }
+            .new-videos__likeNviews {
+                margin-top: auto;
 
-
-
-            .new-videos__item-description {
                 display: flex;
-                justify-content: space-between;
-                flex-grow: 1;
+                align-items: center;
 
-                padding-top: 20px;
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 14px;
 
-                .new-videos__item-value {
+                .icon {
+                    margin-right: 2px;
+                }
 
-                    .new-videos__item-value-numbers {
-                        @include subheader;
+                .new-videos__likes {
+                    display: flex;
+                    align-items: center;
+
+                    margin-right: 19px;
+
+                    .new-videos__like-icon {
+                        width: 12px;
+                        height: 12px; 
                     }
 
-                    .new-videos__item-value-words {
-                        font-family: 'Rubik';
-                        font-style: normal;
-                        font-weight: normal;
-                        font-size: 12px;
-                        line-height: 14px;
-                        color: $black;
+                }
+
+                .new-videos__views {
+                    display: flex;
+                    align-items: center;
+                    
+                    .new-videos__views-icon {
+                        width: 12px;
+                        height: 12px; 
                     }
                 }
 
-                .new-videos__item-title {
-                    font-family: 'Rubik';
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 12px;
-                    line-height: 14px;
-
-                    color: $grey;
-                }
             }
         }
     }
