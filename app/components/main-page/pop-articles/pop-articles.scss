@@ -4,6 +4,10 @@
         margin: 0 auto;
         max-width: 1180px;
         position: relative;
+
+        .pop-articles__item-link {
+            display: block;
+        }
     }
 
     .pop-articles__title {
@@ -11,10 +15,19 @@
         margin-top: 47px;
         margin-bottom: 23px;
 
+
+
+    }
+
+    .pop-articles__items {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .pop-articles__item {
         height: 331px;
+        display: block;
+   
         background-color: #F5F5F5;
 
 
@@ -22,12 +35,38 @@
         box-sizing: border-box;
         border-radius: 8px;
 
+        position: relative;
+
+        .pop-articles__add-to-fav {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            top: 6px;
+            right: 8px;
+            width: 32px;
+            height: 32px;
+            background-color: rgba(17, 17, 17, .5);
+           
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+
+            .pop-articles__fav-icon {
+                stroke: $white;
+                stroke-width: 1.33333px;
+            }
+        }
         
+        &:hover .pop-articles__add-to-fav {
+            display: flex;
+        }
+
     }
     .pop-articles__item--wide {
-        max-width: 571px;
-
-        
+        max-width: 577px;
+        width: 49%;
+        margin-right: 26px;
+       
         .pop-articles__image-wide {
             width: 50%;
             
@@ -39,7 +78,90 @@
         }
         .pop-articles__text-container {
             width: 50%;
+            height: 100%;
+            margin-left: auto;
+            padding: 13px;
+            padding-top: 87px;
+
+            display: flex;
+            flex-direction: column;
+
+
+            .pop-articles__article-title {
+                margin-bottom: 16px;
+            }
         }
+    }
+
+    .pop-articles__item--narrow {
+        max-width: 276px;
+        width: 23.4%;
+
+
+        .pop-articles__text-container {
+            height: 100%;
+            margin-left: auto;
+            padding: 13px;
+            padding-top: 75px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+
+    }
+
+    .pop-articles__article-title {
+        @include header-4;
+        
+    }
+
+    .pop-articles__description {
+        @include grey-text;
+    }
+
+    .pop-articles__likeNviews  {
+        margin-top: auto;
+
+        display: flex;
+        align-items: center;
+
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+
+        .pop-articles__likes {
+            display: flex;
+            align-items: center;
+
+            margin-right: 22px;
+
+            .pop-articles__like-icon {
+                width: 12px;
+                height: 12px; 
+            }
+
+        }
+
+        .pop-articles__views {
+            display: flex;
+            align-items: center;
+            
+            .pop-articles__views-icon {
+                width: 12px;
+                height: 12px; 
+            }
+        }
+
+    }
+
+
+    .pop-articles__item--2 {
+        background-image: url('../../../assets/images/Rectangle 6 copy.png');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
 }

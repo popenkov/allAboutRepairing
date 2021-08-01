@@ -1,0 +1,66 @@
+.new-videos
+    .new-videos__container
+        h2.new-videos__title Новые видео
+        .new-videos__slider-buttons
+                .new-videos__slider-button.new-videos__slider-button-prev
+                    +svg('chevron-left', ' new-videos__slider-button-svg')
+                .new-videos__slider-button.new-videos__slider-button-next
+                    +svg('chevron-right', ' new-videos__slider-button-svg')
+
+        .swiper-container.new-videos__slider-swiper
+
+            .swiper-wrapper
+                .swiper-slide
+                    a.new-videos__item
+                        a.new-videos__add-to-fav(href="#")
+                            +svg('heart', ' pop-articles__fav-icon')
+                        img.new-videos__item-photo(src="../../assets/images/Rectangle 5.png")
+                        .new-videos__item-container
+                            h3.new-videos__item-title Ручное оштукатуривание стен из газобетона
+                            p.new-videos__item-sections
+                                span.new-videos__item-section Раздел
+                                | &nbsp;/&nbsp;
+                                span.new-videos__item-subsection Подраздел
+                            .new-videos__item-description
+                                .new-videos__item-time 
+                                    p.new-videos__item-value.new-videos__item-time-value 
+                                        span.new-videos__item-value-numbers    50
+                                        span.new-videos__item-value-words    мин
+                                    p.new-videos__item-title.new-videos__item-time-title работа
+                                .new-videos__item-materials
+                                    p.new-videos__item-value.new-videos__item-materials-value 4 500 руб
+                                    p.new-videos__item-title.new-videos__item-materials-title материалы
+                                .new-videos__item-price 
+                                    p.new-videos__item-value.new-videos__item-price-value 16 000 руб
+                                    p.new-videos__item-title.new-videos__item-price-title стоимость работ
+
+
+
+                .swiper-slide
+                    .new-videos__item
+                        .new-videos__working-plan
+                            +svg('plan')
+                        .new-videos__favorites
+                            +svg('heart-stroke')
+                        img.new-videos__item-photo(src="../../assets/images/Rectangle 6-1.png")
+                        .new-videos__item-container
+                            h3.new-videos__item-title Монтаж розеток
+                            p.new-videos__item-sections
+                                span.new-videos__item-section Раздел
+                                | &nbsp;/&nbsp;
+                                span.new-videos__item-subsection Подраздел
+
+                            .new-videos__item-description
+                                .new-videos__item-time 
+                                    p.new-videos__item-value.new-videos__item-time-value 
+                                        span.new-videos__item-value-numbers    50
+                                        span.new-videos__item-value-words    мин
+                                    p.new-videos__item-title.new-videos__item-time-title работа
+                                .new-videos__item-materials
+                                    p.new-videos__item-value.new-videos__item-materials-value 4 500 руб
+                                    p.new-videos__item-title.new-videos__item-materials-title материалы
+                                .new-videos__item-price 
+                                    p.new-videos__item-value.new-videos__item-price-value 16 000 руб
+                                    p.new-videos__item-title.new-videos__item-price-title стоимость работ
+
+
