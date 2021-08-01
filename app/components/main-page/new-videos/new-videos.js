@@ -8,8 +8,8 @@ const newVideosSwiper = new Swiper('.new-videos__slider-swiper', {
 
     // Navigation arrows
     navigation: {
-      nextEl: '.pop-works__slider-button-next',
-      prevEl: '.pop-works__slider-button-prev',
+      nextEl: '.new-videos__slider-button-next',
+      prevEl: '.new-videos__slider-button-prev',
     },
   
   });
