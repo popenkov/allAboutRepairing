@@ -1,6 +1,9 @@
 .pop-articles {
     width: 100%;
     margin-bottom: 48px;
+
+
+    
     .pop-articles__container {
         margin: 0 auto;
         max-width: 1180px;
@@ -65,6 +68,11 @@
         }
 
     }
+
+    .pop-articles__item--wide-mobile {
+        display: none;
+    }
+
     .pop-articles__item--wide {
         max-width: 577px;
         width: 49%;
@@ -231,6 +239,11 @@
 
 }
 
+.pop-articles--no-swiper {
+    /* adaptive */
+    height: 690px;
+}
+
 
 @media (max-width: 415px) {
     .pop-articles {
@@ -297,21 +310,28 @@
             }
     
         }
+
         .pop-articles__item--wide {
+            display: none;
+        }
+
+        .pop-articles__item--wide-mobile {
             max-width: 577px;
-            width: 49%;
+            width: 100%;
+            margin: 0;
             display: flex;
+            flex-direction: column;
            
             .pop-articles__image-wide {
-                width: 50%;
+                width: 100%;
                 height: 331px;
                 background-image: url('../../../assets/images/Rectangle 6.png');
-                background-size: contain;
+                background-size: cover;
                 background-repeat: no-repeat;
                 position: relative;    
                 line-height: 0;
                 
-                &::after {
+            /*     &::after {
                     content: "";
                     display: block;    
                     width: 100%;
@@ -322,16 +342,15 @@
                     background: transparent;
                     background-image: linear-gradient(90.01deg, rgba(245, 245, 245, 0) 50.21%, #F5F5F5 99.99%);;
                     /* opacity: 0.8; */
-                }
+                /*} */
             }
     
     
             .pop-articles__text-container {
-                width: 50%;
+                width: 100%;
                 height: 100%;
-                margin-left: auto;
                 padding: 13px;
-                padding-top: 87px;
+                /* padding-top: 87px; */
     
                 display: flex;
                 flex-direction: column;

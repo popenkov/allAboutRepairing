@@ -1,103 +1,126 @@
 .pop-articles
     .pop-articles__container
         h2.pop-articles__title Популярные статьи
-        .pop-articles__items
-            a.pop-articles__item-link(href="#")
-                .pop-articles__item.pop-articles__item--wide.pop-articles__item--1
-                    a.pop-articles__add-to-fav(href="#")
-                        +svg('heart', ' pop-articles__fav-icon')
-                    .pop-articles__image-wide
-                    .pop-articles__text-container
-                        h2.pop-articles__article-title Штукатурные работы
-                        p.pop-articles__description Производятся для выравнивания раствором поверхностей стен и потолков под последующую окраску или для защиты конструкций от механических и температурных воздействий различных сред.
-                        .pop-articles__likeNviews 
-                            .pop-articles__likes
-                                +svg('heart-fill')
-                                span.pop-articles__likes-number 200
-                            .pop-articles__views
-                                +svg('eye-fill')
-                                span.pop-articles__views-number 1 264
-            a.pop-articles__item-link(href="#")
-                .pop-articles__item.pop-articles__item--narrow.pop-articles__item--2
-                    a.pop-articles__add-to-fav(href="#")
-                        +svg('heart', ' pop-articles__fav-icon')
-                    .pop-articles__text-container
-                        h2.pop-articles__article-title Выбор штукатурки
-                        .pop-articles__likeNviews 
-                            .pop-articles__likes
-                                +svg('heart-fill', ' pop-articles__like-icon')
-                                span.pop-articles__likes-number 200
-                            .pop-articles__views
-                                +svg('eye-fill', ' pop-articles__views-icon')
-                                span.pop-articles__views-number 1 264
 
-            a.pop-articles__item-link(href="#")
-                .pop-articles__item.pop-articles__item--narrow.pop-articles__item--3
-                    a.pop-articles__add-to-fav(href="#")
-                        +svg('heart', ' pop-articles__fav-icon')
-                    .pop-articles__text-container
-                        h2.pop-articles__article-title Обзор технологий нанесения штукатурки
-                        .pop-articles__likeNviews 
-                            .pop-articles__likes
-                                +svg('heart-fill', ' pop-articles__like-icon')
-                                span.pop-articles__likes-number 200
-                            .pop-articles__views
-                                +svg('eye-fill', ' pop-articles__views-icon')
-                                span.pop-articles__views-number 1 264
+        a.pop-articles__item-link(href="#")
+            .pop-articles__item.pop-articles__item--wide-mobile.pop-articles__item--1
+                a.pop-articles__add-to-fav(href="#")
+                    +svg('heart', ' pop-articles__fav-icon')
+                .pop-articles__image-wide
+                .pop-articles__text-container
+                    h2.pop-articles__article-title Штукатурные работы
+                    p.pop-articles__description Производятся для выравнивания раствором поверхностей стен и потолков под последующую окраску или для защиты конструкций от механических и температурных воздействий различных сред.
+                    .pop-articles__likeNviews 
+                        .pop-articles__likes
+                            +svg('heart-fill')
+                            span.pop-articles__likes-number 200
+                        .pop-articles__views
+                            +svg('eye-fill')
+                            span.pop-articles__views-number 1 264
 
-            a.pop-articles__item-link(href="#")
-                .pop-articles__item.pop-articles__item--narrow.pop-articles__item--4
-                    a.pop-articles__add-to-fav(href="#")
-                        +svg('heart', ' pop-articles__fav-icon')
-                    .pop-articles__text-container
-                        h2.pop-articles__article-title Выбор штукатурки
-                        .pop-articles__likeNviews 
-                            .pop-articles__likes
-                                +svg('heart-fill', ' pop-articles__like-icon')
-                                span.pop-articles__likes-number 200
-                            .pop-articles__views
-                                +svg('eye-fill', ' pop-articles__views-icon')
-                                span.pop-articles__views-number 1 264
 
-            a.pop-articles__item-link(href="#")
-                .pop-articles__item.pop-articles__item--narrow.pop-articles__item--5
-                    a.pop-articles__add-to-fav(href="#")
-                        +svg('heart', ' pop-articles__fav-icon')
-                    .pop-articles__text-container
-                        h2.pop-articles__article-title Обзор технологий нанесения штукатурки
-                        .pop-articles__likeNviews 
-                            .pop-articles__likes
-                                +svg('heart-fill', ' pop-articles__like-icon')
-                                span.pop-articles__likes-number 200
-                            .pop-articles__views
-                                +svg('eye-fill', ' pop-articles__views-icon')
-                                span.pop-articles__views-number 1 264
 
-            a.pop-articles__item-link(href="#")
-                .pop-articles__item.pop-articles__item--narrow.pop-articles__item--6
-                    a.pop-articles__add-to-fav(href="#")
-                        +svg('heart', ' pop-articles__fav-icon')
-                    .pop-articles__text-container
-                        h2.pop-articles__article-title Выбор штукатурки
-                        .pop-articles__likeNviews 
-                            .pop-articles__likes
-                                +svg('heart-fill', ' pop-articles__like-icon')
-                                span.pop-articles__likes-number 200
-                            .pop-articles__views
-                                +svg('eye-fill', ' pop-articles__views-icon')
-                                span.pop-articles__views-number 1 264
+        .pop-articles__items-swiper.pop-articles--no-swiper
+            .pop-articles__items.swiper-wrapper
+                
+                a.pop-articles__item-link(href="#")
+                    .pop-articles__item.swiper-slide.pop-articles__item--wide.pop-articles__item--1
+                        a.pop-articles__add-to-fav(href="#")
+                            +svg('heart', ' pop-articles__fav-icon')
+                        .pop-articles__image-wide
+                        .pop-articles__text-container
+                            h2.pop-articles__article-title Штукатурные работы
+                            p.pop-articles__description Производятся для выравнивания раствором поверхностей стен и потолков под последующую окраску или для защиты конструкций от механических и температурных воздействий различных сред.
+                            .pop-articles__likeNviews 
+                                .pop-articles__likes
+                                    +svg('heart-fill')
+                                    span.pop-articles__likes-number 200
+                                .pop-articles__views
+                                    +svg('eye-fill')
+                                    span.pop-articles__views-number 1 264
 
-            a.pop-articles__item-link(href="#")
-                .pop-articles__item.pop-articles__item--narrow.pop-articles__item--7
-                    a.pop-articles__add-to-fav(href="#")
-                        +svg('heart', ' pop-articles__fav-icon')
-                    .pop-articles__text-container
-                        h2.pop-articles__article-title Обзор технологий нанесения штукатурки
-                        .pop-articles__likeNviews 
-                            .pop-articles__likes
-                                +svg('heart-fill', ' pop-articles__like-icon')
-                                span.pop-articles__likes-number 200
-                            .pop-articles__views
-                                +svg('eye-fill', ' pop-articles__views-icon')
-                                span.pop-articles__views-number 1 264
+
+                a.pop-articles__item-link(href="#")
+                    .pop-articles__item.swiper-slide.pop-articles__item--narrow.pop-articles__item--2
+                        a.pop-articles__add-to-fav(href="#")
+                            +svg('heart', ' pop-articles__fav-icon')
+                        .pop-articles__text-container
+                            h2.pop-articles__article-title Выбор штукатурки
+                            .pop-articles__likeNviews 
+                                .pop-articles__likes
+                                    +svg('heart-fill', ' pop-articles__like-icon')
+                                    span.pop-articles__likes-number 200
+                                .pop-articles__views
+                                    +svg('eye-fill', ' pop-articles__views-icon')
+                                    span.pop-articles__views-number 1 264
+
+                a.pop-articles__item-link(href="#")
+                    .pop-articles__item.swiper-slide.pop-articles__item--narrow.pop-articles__item--3
+                        a.pop-articles__add-to-fav(href="#")
+                            +svg('heart', ' pop-articles__fav-icon')
+                        .pop-articles__text-container
+                            h2.pop-articles__article-title Обзор технологий нанесения штукатурки
+                            .pop-articles__likeNviews 
+                                .pop-articles__likes
+                                    +svg('heart-fill', ' pop-articles__like-icon')
+                                    span.pop-articles__likes-number 200
+                                .pop-articles__views
+                                    +svg('eye-fill', ' pop-articles__views-icon')
+                                    span.pop-articles__views-number 1 264
+
+                a.pop-articles__item-link(href="#")
+                    .pop-articles__item.swiper-slide.pop-articles__item--narrow.pop-articles__item--4
+                        a.pop-articles__add-to-fav(href="#")
+                            +svg('heart', ' pop-articles__fav-icon')
+                        .pop-articles__text-container
+                            h2.pop-articles__article-title Выбор штукатурки
+                            .pop-articles__likeNviews 
+                                .pop-articles__likes
+                                    +svg('heart-fill', ' pop-articles__like-icon')
+                                    span.pop-articles__likes-number 200
+                                .pop-articles__views
+                                    +svg('eye-fill', ' pop-articles__views-icon')
+                                    span.pop-articles__views-number 1 264
+
+                a.pop-articles__item-link(href="#")
+                    .pop-articles__item.swiper-slide.pop-articles__item--narrow.pop-articles__item--5
+                        a.pop-articles__add-to-fav(href="#")
+                            +svg('heart', ' pop-articles__fav-icon')
+                        .pop-articles__text-container
+                            h2.pop-articles__article-title Обзор технологий нанесения штукатурки
+                            .pop-articles__likeNviews 
+                                .pop-articles__likes
+                                    +svg('heart-fill', ' pop-articles__like-icon')
+                                    span.pop-articles__likes-number 200
+                                .pop-articles__views
+                                    +svg('eye-fill', ' pop-articles__views-icon')
+                                    span.pop-articles__views-number 1 264
+
+                a.pop-articles__item-link(href="#")
+                    .pop-articles__item.swiper-slide.pop-articles__item--narrow.pop-articles__item--6
+                        a.pop-articles__add-to-fav(href="#")
+                            +svg('heart', ' pop-articles__fav-icon')
+                        .pop-articles__text-container
+                            h2.pop-articles__article-title Выбор штукатурки
+                            .pop-articles__likeNviews 
+                                .pop-articles__likes
+                                    +svg('heart-fill', ' pop-articles__like-icon')
+                                    span.pop-articles__likes-number 200
+                                .pop-articles__views
+                                    +svg('eye-fill', ' pop-articles__views-icon')
+                                    span.pop-articles__views-number 1 264
+
+                a.pop-articles__item-link(href="#")
+                    .pop-articles__item.swiper-slide.pop-articles__item--narrow.pop-articles__item--7
+                        a.pop-articles__add-to-fav(href="#")
+                            +svg('heart', ' pop-articles__fav-icon')
+                        .pop-articles__text-container
+                            h2.pop-articles__article-title Обзор технологий нанесения штукатурки
+                            .pop-articles__likeNviews 
+                                .pop-articles__likes
+                                    +svg('heart-fill', ' pop-articles__like-icon')
+                                    span.pop-articles__likes-number 200
+                                .pop-articles__views
+                                    +svg('eye-fill', ' pop-articles__views-icon')
+                                    span.pop-articles__views-number 1 264
 
