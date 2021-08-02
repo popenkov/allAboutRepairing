@@ -12,12 +12,12 @@ const newVideosSwiper = new Swiper('.new-videos__slider-swiper', {
 
 
     breakpoints: {
-      // when window width is >= 320px
+      // when window width is >= 414
       414: {
-        slidesPerView: 1,
-        spaceBetween: 0
+        slidesPerView: 1.36,
+        spaceBetween: 24
       },
-      // when window width is >= 480px
+      // when window width is >= 1000
       1000: {
         slidesPerView: 4,
         spaceBetween: 24

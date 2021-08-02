@@ -74,7 +74,7 @@
 @media (max-width: 415px) {
     .subscription {
 
-    
+        margin-top: -24px;
         .subscription__form {
             width: 92%;
             padding: 24px;
@@ -87,27 +87,21 @@
                 }
     
                 .subscription__subtitle {
-                    padding-bottom: 16px;
+                    padding-bottom: 25px;
                 }
             }
     
             .subscription__inputs {
-                width: 87%;
+                width: 100%;
     
                 .subscription__email {
 
-                    width: 100%;    
+                    width: 100%;   
+                    margin-bottom: 16px; 
                 }
     
                 .subscription__submit {
-                    cursor: pointer;
-                    width: 177px;
-                    height: 40px;
-                    border: none;
-                    background: $blue;
-                    @include text-regular;
-                    color: $white;
-                    border-radius: 6px;
+                    margin-bottom: 10px;
     
                 }
                 .subscription__agreement-p {
