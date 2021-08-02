@@ -183,3 +183,18 @@
 .new-videos:hover .new-videos__slider-button {
     display: flex;
 }
+
+
+@media (max-width: 415px) {
+    .new-videos {
+        .new-videos__container  {
+            width: 92%;
+    
+    
+            .new-videos__item {
+                width: 100%;
+                max-width: unset;
+            }
+        }
+    }
+}

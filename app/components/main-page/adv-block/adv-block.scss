@@ -19,3 +19,9 @@
         color: $grey;
     }
 }
+
+@media (max-width: 415px) {
+    .adv__place {
+        width: 92%;
+    }
+}

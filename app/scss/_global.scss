@@ -20,6 +20,21 @@ body {
     letter-spacing: 0;
 }
 
+body {
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+.body__no-scroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.body_container--filter {
+    filter: opacity(10%);
+}
+
 .svg-sprite {
     display: none;
 }

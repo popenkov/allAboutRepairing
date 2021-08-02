@@ -8,7 +8,7 @@
 
     .main__slider-swiper-img {
         width: 100%;
-        object-fit: contain;
+        object-fit: cover;
         border-radius: 8px;
     }
 
@@ -74,3 +74,26 @@
 }
 
 
+@media (max-width: 415px) {
+    .main__slider {
+        height: 500px;
+    }
+
+    .main__slider-swiper {
+        width: 92%;
+
+        .swiper-slide {
+            width: 100%;
+
+            .main__slider-swiper-img {
+                height: 500px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .main__slider-buttons {
+        display: none;
+}
+
+}

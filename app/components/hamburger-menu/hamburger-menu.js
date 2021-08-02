@@ -14,17 +14,36 @@
 		   slidesPerView: 'auto',
 		   allowTouchMove: false,
 		  loop: false,
+		  slideActiveClass: 'swiper-slide-active',
 		   
-		   watchSlidesVisibility: true,
-		   watchSlidesProgress: true,
+		/*    watchSlidesVisibility: true,
+		   watchSlidesProgress: true, */
 	 
 		   scrollbar: {
 			 el: '.swiper-scrollbar',
 			 draggable: true,
 			 hide: true,
 		   },
+
+
 		   
 		 });
+
+		 /* отмечаю активный слайд */
+		 const leftSwiperSlides = document.querySelectorAll('.hamburger__left-menu .swiper-wrapper .swiper-slide');
+		 leftMenuSwiper.on('click', function (e) {
+			leftSwiperSlides.forEach(item => {
+				item.classList.remove('swiper-slide-active');
+			})
+			 let target = e.target;
+			 target.classList.add('swiper-slide-active')
+		  });
+
+		  
+
+
+
+
 		 
 	 
 		 const rightMenuSwiper = new Swiper('.hamburger__right-menu', {
@@ -43,7 +62,8 @@
 		 });
 	})
 	
-	
+
+
 	
 	
 	

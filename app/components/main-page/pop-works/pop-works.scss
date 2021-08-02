@@ -188,3 +188,13 @@
 .pop-works:hover .pop-works__slider-button {
     display: flex;
 }
+
+
+
+
+
+@media (max-width: 415px) {
+    .pop-works-container {
+        width: 92%;
+    }
+}

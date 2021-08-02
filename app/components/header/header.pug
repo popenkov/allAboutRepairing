@@ -1,9 +1,12 @@
 header.header
     .header__container 
         .header__container-top
+            button.header__hamburger-btn-mobile
+                +svg('menu', ' header__hamburger-btn-mobile-svg')
+
             a.header__logo(href="index.html") 
-                span Про
-                span.header__logo--blue &nbsp;ремонт
+                +svg('logo', ' header__logo-svg')
+
 
             a.header__location(href='') 
                 +svg('map-pin') 
