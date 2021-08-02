@@ -7,7 +7,6 @@
         max-width: 1312px;
         margin: 0 auto;
         box-sizing: border-box;
-        border: 1px solid black;
         display: flex;
         flex-direction: column;
 
@@ -15,6 +14,7 @@
             display: flex;
             align-items: center;
             padding: 14px 0px;
+            padding-bottom: 21px;
             border-bottom: 1px solid $grey-border;
         }
 
@@ -24,15 +24,27 @@
     &__logo{
         @include header-1;
         text-transform: uppercase;
+        text-transform: uppercase;
+        letter-spacing: -4px;
+        margin-right: 63px;
 
         &--blue {
             color: $blue;
         }
     }
 
+    &__links-item {
+        @include subheader;
+        margin-right: 65px;
+    }
+
 
     &__social-networks-container {
         margin-left: auto;
+
+        .footer__social-networks-item {
+            margin-left: 20px;
+        }
 
         .footer__social-img {
             width: 32px;
@@ -46,11 +58,17 @@
     &__container-bottom {
         display: flex;
         align-items: center;
-        padding: 14px 0px;
+        padding: 25px 0px;
         
         .footer__copyright {
             @include body-regular;
             color: $grey;
+
+            margin-right: 121px;
+        }
+
+        .footer__links-item {
+            @include body-regular;
         }
     }
 

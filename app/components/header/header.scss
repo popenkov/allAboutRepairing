@@ -9,10 +9,10 @@
     padding: 0 64px;
 
     &__container {
+        position: relative;
         max-width: 1312px;
         margin: 0 auto;
         box-sizing: border-box;
-        border: 1px solid black;
         display: flex;
         flex-direction: column;
 
@@ -41,15 +41,20 @@
     &__location {
         display: flex;
         align-items: center;
+        position: relative;
         .map-pin {
             width: 20px;
             height: 20px;
             margin-right: 12px;
+            stroke: $black;
+            stroke-width: 1.66667px;
         }
 
         &-city {
             @include body-regular;
         }
+
+
     }
 
     &__search-container {
@@ -100,6 +105,7 @@
             width: 20px;
             height: 20px;
             stroke: $black;
+            margin-bottom: 6px;
         }
 
     }
@@ -186,6 +192,100 @@
                 transform: translateX(-50%);
             }
         }
+    }
+
+
+
+    .header__location-popup {
+        opacity: 0;
+        position: absolute;
+        min-width: 324px;
+        min-height: 125px;
+
+        z-index: 2;
+   /*      top: 39px;
+        left: -24px; */
+
+        top: 66px;
+        left: 218px;
+        padding: 24px;
+
+        background: #FFFFFF;
+        border-radius: 4px;
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
+        
+        &::before {
+            content: ' ';
+            width: 20px;
+            height: 20px;
+            background-color: #FFFFFF;
+            position: absolute;
+            top: -5px;
+            left: 24px;
+            transform: rotate(45deg);
+
+            
+        }
+
+
+        .header__location-popup-question-container {
+            display: flex;
+            align-items: center;
+
+            .header__location-popup-svg {
+                width: 20px;
+                height: 20px;
+                stroke: $blue;
+                stroke-width: 1.66667px;
+                margin-right: 12px;
+            }
+
+            .header__location-popup-question {
+                @include body-regular;
+                color: #000;
+            }
+        }
+
+
+        .header__location-buttons-container {
+            margin-top: 15px;
+
+
+
+
+            .header__location-button-submit {
+                @include body-medium;
+                line-height: 16px;
+                cursor: pointer;
+                width: 110px;
+                height: 40px;
+                background-color: $blue;
+                color: $white;
+                border: 1px solid $blue;
+                box-sizing: border-box;
+                border-radius: 6px;
+                margin-right: 13px;
+                
+            }
+
+            .header__location-button-change {
+                @include body-medium;
+                cursor: pointer;
+                line-height: 16px;
+                padding: 12px 17px;
+                background: transparent;
+                border: 1px solid $blue;
+                border-radius: 6px;
+                
+            }
+        }
+
+
+
+    }
+
+    .header__location-popup--show {
+        opacity: 1;
     }
 
 }

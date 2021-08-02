@@ -5,9 +5,11 @@ header.header
                 span Про
                 span.header__logo--blue &nbsp;ремонт
 
-            .header__location 
+            a.header__location(href='') 
                 +svg('map-pin') 
                 span.header__location-city Санкт-Петербург
+
+
 
             .header__search-container
                 input.header__search-input(type='text' placeholder='Поиск...')
@@ -35,4 +37,14 @@ header.header
                 .navigation__item Гостиная
                 .navigation__item Спальня
 
-            
+
+
+        .header__location-popup 
+            .header__location-popup-question-container
+                +svg('map-pin', ' header__location-popup-svg')
+                p.header__location-popup-question Ваш город&nbsp;
+                    span Санкт-Петербург
+                | ?
+            .header__location-buttons-container
+                button.header__location-button-submit Да, верно
+                button.header__location-button-change Выбрать другой
