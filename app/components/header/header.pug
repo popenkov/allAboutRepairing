@@ -13,11 +13,11 @@ header.header
                 input.header__search-input(type='text' placeholder='Поиск...')
                 +svg('search')
 
-            .header__link-item.header__working-plan(href="#" target="_blank")
+            a.header__link-item.header__working-plan(href="#" target="_blank")
                 +svg('plan')
                 span.header__working-plan-title План работ
 
-            .header__link-item.header__favorites(href="#" target="_blank")
+            a.header__link-item.header__favorites(href="#" target="_blank")
                 +svg('heart-stroke')
                 span.header__favorites-title Избранное
 
@@ -25,7 +25,7 @@ header.header
             
 
         .header__navigation-container
-            button.header__navigation-hamburer-btn 
+            button.header__navigation-hamburer-btn.js-hamburger-btn 
                 +svg('grid-fill') 
                 .span Каталог
             navigation.header__navigation.navigation

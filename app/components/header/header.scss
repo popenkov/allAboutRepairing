@@ -30,7 +30,8 @@
     &__logo{
         @include header-1;
         text-transform: uppercase;
-        margin-right: 19px;
+        letter-spacing: -4px;
+        margin-right: 50px;
 
         &--blue {
             color: $blue;
@@ -38,9 +39,12 @@
     }
 
     &__location {
+        display: flex;
+        align-items: center;
         .map-pin {
             width: 20px;
             height: 20px;
+            margin-right: 12px;
         }
 
         &-city {
@@ -102,12 +106,18 @@
 
 
     &__log-in-btn {
+        cursor: pointer;
         width: 110px;
         height: 40px;
         background-color: transparent;
         border: 1px solid $blue;
         box-sizing: border-box;
         border-radius: 6px;
+
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
     }
 
     &__navigation-container {
@@ -122,6 +132,8 @@
         justify-content: center;
         align-items: center;
         width: 112px;
+        padding-left: 10px;
+        padding-right: 12px;
         height: 36px;
         margin-right: 47px;
 
@@ -142,6 +154,7 @@
         & svg {
             width: 16px;
             height: 16px;
+            margin-right: 9px;
         }
     }
 

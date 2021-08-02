@@ -1,8 +1,9 @@
 
 .hamburger {
+    display: none;
     max-width: 1312px;
     margin: 0 auto;
-    display: flex;
+    
     .hamburger__left-menu {
         height: 636px;
         width: 261px;
@@ -159,4 +160,16 @@
     overflow: hidden;
     z-index: 1;
 }
+}
+
+
+.hamburger-show {
+    position:absolute;
+    display: flex;
+    z-index: 2;
+    width: 100%;
+    top: 125px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
 }
