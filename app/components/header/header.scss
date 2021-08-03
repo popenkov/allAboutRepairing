@@ -305,8 +305,6 @@
     .header{
         padding: 0;
     
-        
-    
         &__container {
             width: 92%;
     
@@ -408,7 +406,21 @@
         }
     
         &__navigation-container {
-            display: none;
+            /* display: none; */
+            border: 1px solid red;
+            top: 55px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            z-index: 3;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 500px;
+            background-color: $light-grey;
+
+
         }
     
         &__navigation-hamburer-btn {
@@ -421,19 +433,15 @@
             height: 36px;
             margin-right: 47px;
     
-            background: $blue;
+            background: transparent;
             border: none;
             border-radius: 6px;
     
     
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 20px;
-    
-            color: $white;
-            fill: $white;
+            @include body-regular;
+            .hamburer-btn--desktop {
+                display: none;
+            }
     
             & svg {
                 width: 16px;

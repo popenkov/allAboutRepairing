@@ -34,7 +34,8 @@ header.header
 
         .header__navigation-container
             button.header__navigation-hamburer-btn.js-hamburger-btn 
-                +svg('grid-fill') 
+                +svg('grid-fill', ' hamburer-btn--desktop')
+                +svg('grid-stroke', ' hamburer-btn--mobile') 
                 .span Каталог
             navigation.header__navigation.navigation
                 .navigation__item Кухня
