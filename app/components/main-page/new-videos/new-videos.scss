@@ -189,25 +189,17 @@
 
 
 @media (max-width: $maxTabletValue) {
-    .new-videos {
-        .new-videos__container  {
-            width: 91.1%;
-            overflow: hidden;
-    
-    
-            .new-videos__item {
-                width: 100%;
-                max-width: unset;
-            }
-        }
-    }
+  
+
 
     .new-videos {
 
 
     
         .new-videos__container {
-            width: 92%;
+            width: 91.1%;
+            overflow: hidden;
+            height: 386px;
     
         .swiper-slide {
             height: 323px;

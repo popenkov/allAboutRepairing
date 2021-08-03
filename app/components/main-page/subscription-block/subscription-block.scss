@@ -71,7 +71,54 @@
 }
 
 
-@media (max-width: 415px) {
+@media (max-width: $maxTabletValue) {
+    .subscription {
+
+        margin-top: -24px;
+        .subscription__form {
+            width: 91.1%;
+            padding: 24px;
+    
+            .subscription__text {
+    
+                .subscription__title {
+                    @include header-4;
+                    padding-bottom: 16px;
+                }
+    
+                .subscription__subtitle {
+                    padding-bottom: 25px;
+                }
+            }
+    
+            .subscription__inputs {
+                width: 100%;
+    
+                .subscription__email {
+
+                    width: 100%;   
+                    margin-bottom: 16px; 
+                }
+    
+                .subscription__submit {
+                    margin-bottom: 10px;
+    
+                }
+                .subscription__agreement-p {
+                    @include grey-text;
+    
+                    .subscription__agreement-link {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+@media (max-width: $maxMobileValue) {
     .subscription {
 
         margin-top: -24px;
