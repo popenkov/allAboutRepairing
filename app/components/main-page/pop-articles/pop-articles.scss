@@ -7,6 +7,7 @@
     .pop-articles__container {
         margin: 0 auto;
         max-width: 1180px;
+        width: 92%;
         position: relative;
 
         .pop-articles__item-link {
@@ -245,7 +246,12 @@
 }
 
 
-@media (max-width: 415px) {
+@media (max-width: $maxTabletValue) {
+
+}
+
+
+@media (max-width: $maxMobileValue) {
     .pop-articles {
         width: 100%;
         margin-bottom: 33px;

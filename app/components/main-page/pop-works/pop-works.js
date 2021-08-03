@@ -2,6 +2,10 @@ const popWorksSwiper = new Swiper('.pop-works__slider-swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
+
+    // Default parameters
+    slidesPerView: 3,
+    spaceBetween: 24,
    
   
 
@@ -12,21 +16,21 @@ const popWorksSwiper = new Swiper('.pop-works__slider-swiper', {
     },
 
     breakpoints: {
-      // when window width is >= 320px
-      414: {
+      // when window width is >= 414x
+      700: {
         slidesPerView: 1,
-        spaceBetween: 0
+        spaceBetween: 0,
       },
       // when window width is >= 480px
-      1000: {
-        slidesPerView: 3,
-        spaceBetween: 24
+      1150: {
+        slidesPerView: 2,
+        spaceBetween: 24,
       },
 
 
       1440: {
         slidesPerView: 3,
-        spaceBetween: 24
+        spaceBetween: 24,
       }
 
     }
