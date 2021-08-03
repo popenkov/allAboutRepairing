@@ -21,13 +21,14 @@ body {
 }
 
 body {
-/*     overflow-x: hidden;
-    width: 100vw; */
+    overflow-x: hidden;
+    /* width: 100vw; */
 }
 
 .body__no-scroll {
     height: 100%;
     overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 

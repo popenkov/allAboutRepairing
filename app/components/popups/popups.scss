@@ -86,13 +86,36 @@ label.error input,
     
 
     .registration {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.4);
 
-
-        .registration__content {
-
+        .registration__body {
+            width: 378px;
+            min-height: 556px;
+            background: $white;
+       
+            border: 1px solid $light-blue;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.25);
+            border-radius: 16px;
+        
+            position: absolute;
+            top: 50%;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
+        .registration__content{
+            margin: 0 auto;
+            width: 89.6%;
+            margin-top: 18px;
+            margin-bottom: 18px;
+
+
+            .registration__title {
+                @include header-3;
+            }
+        }
     }
     
   
