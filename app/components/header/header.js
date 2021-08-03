@@ -23,7 +23,7 @@ const toogleHamburger=() => {
 
 const showMenu = () => {
     menuContainer.classList.toggle('show');
-    siteBody.classList.toggle('body__no-scroll');
+  
 
 }
 
@@ -34,8 +34,10 @@ const showMenu = () => {
     showMenu();
 
 
+  
 
-}) */
+})
 
 
 
+ */

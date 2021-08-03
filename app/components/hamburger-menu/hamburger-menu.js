@@ -108,6 +108,13 @@ const showMenu = () => {
     showMenu();
 
 	hamburgerMenu.classList.remove('hamburger-show');
+
+	  /*  if(menuContainer.classList.contains('show')) {
+        main.style.display =  'none';
+    } else {
+        main.style.display =  'block';
+    } */
+
 	
 
 
