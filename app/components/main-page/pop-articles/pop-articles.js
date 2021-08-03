@@ -1,18 +1,20 @@
-
-
 let { clientWidth } = document.body;
 const swiperContainer = document.querySelector('.pop-articles__items-swiper');
 let popArticlesSwiper;
+
 const sliderInit = () => {
     console.log('sliderInit')
-   popArticlesSwiper  = new Swiper('.pop-articles__items-swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-  
+    popArticlesSwiper  = new Swiper('.pop-articles__items-swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 1.35,
+        spaceBetween: 20
+      
+    })
 
   
-  });
+  
 
   swiperContainer.classList.remove('pop-articles--no-swiper');
 }
@@ -44,19 +46,4 @@ window.addEventListener('resize', resizeHandlerSlider);
 
 
 
-console.log(clientWidth)
-/* let yourSlider;
-
-
-
-const resizeHandlerSlider = () => {
-    if (clientWidth !== document.body.clientWidth) {
-        clientWidth = document.body.clientWidth;
-
-        if (yourSlider) {
-            yourSlider.destroy();
-        }
-
-        sliderInit();
-    }
-} */
+console.log(clientWidth);
