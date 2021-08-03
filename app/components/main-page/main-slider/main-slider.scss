@@ -1,13 +1,16 @@
 .main__slider {
     margin: 0 auto;
     max-width: 1312px;
+    min-width: 414px;
     height: 480px;
     border-radius: 8px;
     position: relative;
     margin-top: 25px;
+    width: 91.1%;
 
     .main__slider-swiper-img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
         border-radius: 8px;
     }
@@ -75,7 +78,7 @@
 }
 
 
-@media (max-width: 415px) {
+@media (max-width: $maxMobileValue) {
     .main__slider {
         height: 500px;
         margin-top: 22px;

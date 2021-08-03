@@ -1,13 +1,9 @@
 ///
 // Vars
 ///
-// Container break-points
-$grid-breakpoints: (
-	min: 0px,
-	mobile: 320px,
-	tablet: 768px,
-	desktop: 1280px
-);
+
+
+$maxMobileValue: 768px;
 
 // Colors 
 $blue: #0A9CE5;
