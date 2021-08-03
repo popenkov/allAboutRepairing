@@ -1,5 +1,8 @@
 section.hamburger.js-hamburger-menu
   ul.hamburger__left-menu
+      a.hamburger__back-btn-mobile(href="#")
+        +svg('chevron-left', ' hamburger__back-svg')
+        | Каталог
       li.hamburger__left-menu-item
         a.hamburger__left-menu-item-link(href="#") Стены
           +svg('chevron-right')

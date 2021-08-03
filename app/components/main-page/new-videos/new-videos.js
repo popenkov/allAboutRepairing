@@ -4,6 +4,7 @@ const newVideosSwiper = new Swiper('.new-videos__slider-swiper', {
     loop: true,
     slidesPerView: 4,
     spaceBetween: 24,
+    loopAdditionalSlides: 3,
   
 
     // Navigation arrows

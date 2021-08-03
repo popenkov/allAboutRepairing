@@ -544,7 +544,6 @@
         &__navigation-container {
             opacity: 0;
             z-index: -5;
-            border: 1px solid red;
             top: 55px;
             display: flex;
             flex-direction: column;
@@ -555,7 +554,7 @@
             left: 50%;
             transform: translateX(-50%);
             height: 500px;
-            background-color: $light-grey;
+            background-color: $white;
 
 
         }

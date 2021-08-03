@@ -10,7 +10,8 @@ const sliderInit = () => {
         direction: 'horizontal',
         loop: true,
         slidesPerView: 1.35,
-        spaceBetween: 20
+        spaceBetween: 20,
+        loopAdditionalSlides: 3
       
     })
 

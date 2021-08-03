@@ -1,10 +1,26 @@
 
 	const catalogButton = document.querySelector('.js-hamburger-btn');
 	const hamburgerMenu = document.querySelector('.js-hamburger-menu');
+	const hamburgerBackBtn = document.querySelector('.hamburger__back-btn-mobile');
+	const hambergerCloseBtn = document.querySelector('.header__hamburger-btn-mobile.change');
 	
 	!!catalogButton & catalogButton.addEventListener('click', () => {
+		console.log('click')
 		hamburgerMenu.classList.toggle('hamburger-show');
-	})
+
+	
+	
+	});
+
+
+	
+	!!hamburgerBackBtn & hamburgerBackBtn.addEventListener('click', () => {
+		console.log('click')
+		hamburgerMenu.classList.remove('hamburger-show');
+	});
+
+	
+
 
 function tabModule (button, buttonContainer, btnContainer, tab) {
 
@@ -55,6 +71,55 @@ function tabModule (button, buttonContainer, btnContainer, tab) {
     tabModule('.hamburger__left-menu-item-link', '.hamburger__left-menu-item', '.hamburger__left-menu', '.hamburger__right-menu-item');
 
 
+
+	const headerLocationLink = document.querySelector('.header__location');
+const headerLocationPopup = document.querySelector('.header__location-popup');
+
+!!headerLocationLink && headerLocationLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    headerLocationPopup.classList.toggle('header__location-popup--show');
+})
+
+
+
+
+const headerButtonMobile = document.querySelector('.header__hamburger-btn-mobile');
+const menuContainer = document.querySelector('.header__navigation-container');
+const main = document.querySelector('main');
+const siteBody = document.querySelector('body');
+ 
+
+
+
+const toogleHamburger=() => {
+    headerButtonMobile.classList.toggle("change");
+};
+
+const showMenu = () => {
+    menuContainer.classList.toggle('show');
+    /* siteBody.classList.toggle('body__no-scroll'); */
+
+}
+
+
+!!headerButtonMobile && headerButtonMobile.addEventListener('click', (e) => {
+    e.preventDefault();
+    toogleHamburger();
+    showMenu();
+
+	hamburgerMenu.classList.remove('hamburger-show');
+	
+
+
+
+})
+
+/* 	const mobileCatalogBtn = document.querySelector('.hamburer-btn--mobile');
+	!!mobileCatalogBtn & mobileCatalogBtn.addEventListener('click', () => {
+		console.log('click')
+		hamburgerMenu.classList.toggle('.mobile-menu--show ');
+	})
+ */
 
 
 /* 	const leftMenuItems = document.querySelectorAll('.hamburger__left-menu-item')

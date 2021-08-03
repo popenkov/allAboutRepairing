@@ -1,4 +1,4 @@
-const headerLocationLink = document.querySelector('.header__location');
+/* const headerLocationLink = document.querySelector('.header__location');
 const headerLocationPopup = document.querySelector('.header__location-popup');
 
 !!headerLocationLink && headerLocationLink.addEventListener('click', (e) => {
@@ -23,7 +23,7 @@ const toogleHamburger=() => {
 
 const showMenu = () => {
     menuContainer.classList.toggle('show');
-    /* siteBody.classList.toggle('body__no-scroll'); */
+    siteBody.classList.toggle('body__no-scroll');
 
 }
 
@@ -34,13 +34,8 @@ const showMenu = () => {
     showMenu();
 
 
-  /*  if(menuContainer.classList.contains('show')) {
-        main.style.display =  'none';
-    } else {
-        main.style.display =  'block';
-    } */
 
-})
+}) */
 
 
 
