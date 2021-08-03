@@ -1443,24 +1443,20 @@
           </div>
         </div>
       </div>
-      <div class="popup registration" id="auth">
-        <div class="popup__body registration__body">
-          <div class="popup__content registration__content">
-            <p class="registration__title">Авторизация</p>
-            <form class="registration__form" action="#" method="POST">
-              <label class="registration__label registration__name-label">Ваше имя
-                <input class="registration__input registration__name-input" type="text" placeholder="Введите ваше имя" name="name" required="required"/>
+      <div class="popup auth" id="auth">
+        <div class="popup__body auth__body">
+          <div class="popup__content auth__content">
+            <p class="auth__title">Авторизация</p>
+            <form class="auth__form" action="#" method="POST">
+              <label class="auth__label auth__email-label">Электронная почта
+                <input class="auth__input auth__email-input" type="text" placeholder="example@example.com" name="email" required="required"/>
               </label>
-              <label class="registration__label registration__email-label">Электронная почта
-                <input class="registration__input registration__email-input" type="text" placeholder="example@example.com" name="email" required="required"/>
+              <label class="auth__label auth__password-label">Введите пароль
+                <input class="auth__input auth__password-input" type="password" placeholder="Введите пароль" name="password" required="required"/>
               </label>
-              <label class="registration__label registration__password-label">Придумайте пароль
-                <input class="registration__input registration__password-input" type="password" placeholder="Придумайте пароль" name="password" required="required"/>
-              </label>
-              <p class="registration__password-subtitle">Пароль должен содержать не менее 6 символов</p>
-              <button class="registration__submit-btn">Зарегистрироваться</button>
-              <p class="registration__agreement">Нажимая “Зарегистрироваться” я соглашаюсь с <a class="registration__agreement-link" href="#">правилами пользования </a></p>
-            </form><a class="registration__link-to-auth popup-link" href="#auth"> Есть аккаунт?</a><a class="popup__close popup__close-x"></a>
+              <button class="auth__submit-btn">Войти</button><a class="auth__link-to-reset popup-link" href="#reset"> Забыли пароль?</a>
+              <button class="auth__submit-btn">Войти</button><a class="auth__link-to-registration popup-link" href="#registration"> Зарегистрироваться</a>
+            </form><a class="popup__close popup__close-x"></a>
           </div>
         </div>
       </div>

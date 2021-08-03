@@ -21,23 +21,21 @@ a.popup-link(href="#registration") Регистрация
         a.popup__close.popup__close-x
 
 
-#auth.popup.registration
-    .popup__body.registration__body
-      .popup__content.registration__content
-        p.registration__title Авторизация
-        form.registration__form(action="#" method="POST")
-          label.registration__label.registration__name-label Ваше имя
-            input.registration__input.registration__name-input(type="text" placeholder="Введите ваше имя" name="name" required="required")
-          label.registration__label.registration__email-label Электронная почта
-            input.registration__input.registration__email-input(type="text" placeholder="example@example.com" name="email" required="required")
-          label.registration__label.registration__password-label Придумайте пароль
-            input.registration__input.registration__password-input(type="password" placeholder="Придумайте пароль" name="password" required="required")
-          p.registration__password-subtitle Пароль должен содержать не менее 6 символов
-          button.registration__submit-btn Зарегистрироваться
-          p.registration__agreement Нажимая “Зарегистрироваться” я соглашаюсь с 
-            a.registration__agreement-link(href="#") правилами пользования 
+#auth.popup.auth
+    .popup__body.auth__body
+      .popup__content.auth__content
+        p.auth__title Авторизация
+        form.auth__form(action="#" method="POST")
+          label.auth__label.auth__email-label Электронная почта
+            input.auth__input.auth__email-input(type="text" placeholder="example@example.com" name="email" required="required")
+          label.auth__label.auth__password-label Введите пароль
+            input.auth__input.auth__password-input(type="password" placeholder="Введите пароль" name="password" required="required")
+          button.auth__submit-btn Войти
+          a.auth__link-to-reset.popup-link(href="#reset")  Забыли пароль?
+          button.auth__submit-btn Войти
+          a.auth__link-to-registration.popup-link(href="#registration")  Зарегистрироваться
 
-        a.registration__link-to-auth.popup-link(href="#auth")  Есть аккаунт?
+       
         
         a.popup__close.popup__close-x
 
