@@ -2,6 +2,8 @@ const newVideosSwiper = new Swiper('.new-videos__slider-swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
+    slidesPerView: 4,
+    spaceBetween: 24,
   
 
     // Navigation arrows
@@ -13,13 +15,18 @@ const newVideosSwiper = new Swiper('.new-videos__slider-swiper', {
 
     breakpoints: {
       // when window width is >= 414
-      414: {
+      600: {
         slidesPerView: 1.36,
         spaceBetween: 24
       },
+
+      800: {
+        slidesPerView: 2,
+        spaceBetween: 24
+      },
       // when window width is >= 1000
-      1000: {
-        slidesPerView: 4,
+      1150: {
+        slidesPerView: 3,
         spaceBetween: 24
       },
 

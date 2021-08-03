@@ -1,6 +1,7 @@
 let { clientWidth } = document.body;
 const swiperContainer = document.querySelector('.pop-articles__items-swiper');
 let popArticlesSwiper;
+const MAX_MOBILE_WIDTH = 769;
 
 const sliderInit = () => {
     console.log('sliderInit')
@@ -26,16 +27,16 @@ const swiperDestroy = () => {
 }
 
 
-if (clientWidth< 415) {
+if (clientWidth< MAX_MOBILE_WIDTH) {
     sliderInit();
 }
 
 const resizeHandlerSlider = () => {
     let { clientWidth } = document.body;
     console.log(clientWidth);
-    if (clientWidth< 415) {
+    if (clientWidth< MAX_MOBILE_WIDTH) {
         sliderInit();
-    } else if (clientWidth >= 415 && swiperContainer.classList.contains('swiper-container-initialized')) {
+    } else if (clientWidth >= MAX_MOBILE_WIDTH && swiperContainer.classList.contains('swiper-container-initialized')) {
 
         swiperDestroy(); 
     }
