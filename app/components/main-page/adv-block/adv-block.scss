@@ -20,7 +20,14 @@
     }
 }
 
-@media (max-width: 415px) {
+@media (max-width: $maxTabletValue) {
+    .adv__place {
+        width: 91.1%;
+        margin: 24px auto;
+    }
+}
+
+@media (max-width: $maxMobileValue) {
     .adv__place {
         width: 92%;
         margin: 24px auto;
