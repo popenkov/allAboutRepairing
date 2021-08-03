@@ -8,14 +8,14 @@
 
 
     /* показать */
-    position:absolute;
+/*     position:absolute;
     display: flex;
     z-index: 2;
     width: 100%;
     top: 125px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: white;
+    background-color: white; */
     
     .hamburger__left-menu {
         height: 636px;
@@ -33,7 +33,13 @@
                 position: relative;
                 cursor: pointer;
                 height: auto;
-                padding: 10px;
+               /*  padding: 10px; */
+
+                .hamburger__left-menu-item-link {
+                    display: block;
+                    width: 100%;
+                    padding: 10px;
+                }
 
 
                 &.select {
@@ -83,6 +89,11 @@
         width: 80%;
         padding-left: 44px;
         padding-top: 24px;
+
+        .hamburger__right-menu-item {
+            height: 636px;
+            overflow-y: scroll;
+        }
 
 
         .swiper-slide {

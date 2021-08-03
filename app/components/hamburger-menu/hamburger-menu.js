@@ -1,4 +1,12 @@
-function tabModule (button, btnContainer, tab) {
+
+	const catalogButton = document.querySelector('.js-hamburger-btn');
+	const hamburgerMenu = document.querySelector('.js-hamburger-menu');
+	
+	!!catalogButton & catalogButton.addEventListener('click', () => {
+		hamburgerMenu.classList.toggle('hamburger-show');
+	})
+
+function tabModule (button, buttonContainer, btnContainer, tab) {
 
     //нужно найти кнопки, блок контента и блок c кнопками
     let tabButton = document.querySelectorAll(button),
@@ -26,9 +34,11 @@ function tabModule (button, btnContainer, tab) {
     //обработчик клика
     buttonsContainer.addEventListener('click', function (evt) {
         let target = evt.target;
-        if(target.closest(button)) {
+		console.log(target, !!target.closest(button))
+        if(target.closest(buttonContainer)|| target.classList.contains(buttonContainer)) {
             for (let i = 0; i<tabButton.length; i++) {
                 if (target == tabButton[i]) {
+					console.log(tabButton[i])
                     hideTabContent(0);
                     showTabContent(i);
                     break;
@@ -42,7 +52,7 @@ function tabModule (button, btnContainer, tab) {
     }
 
     
-    tabModule('.hamburger__left-menu-item', '.hamburger__left-menu', '.hamburger__right-menu-item');
+    tabModule('.hamburger__left-menu-item-link', '.hamburger__left-menu-item', '.hamburger__left-menu', '.hamburger__right-menu-item');
 
 
 
