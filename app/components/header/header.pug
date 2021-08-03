@@ -2,7 +2,9 @@ header.header
     .header__container 
         .header__container-top
             button.header__hamburger-btn-mobile
-                +svg('menu', ' header__hamburger-btn-mobile-svg')
+                .bar1
+                .bar2
+                .bar3
 
             a.header__logo(href="index.html") 
                 +svg('logo', ' header__logo-svg')
@@ -33,16 +35,32 @@ header.header
             
 
         .header__navigation-container
-            button.header__navigation-hamburer-btn.js-hamburger-btn 
-                +svg('grid-fill', ' hamburer-btn--desktop')
-                +svg('grid-stroke', ' hamburer-btn--mobile') 
-                .span Каталог
+         
             navigation.header__navigation.navigation
-                .navigation__item Кухня
-                .navigation__item Прихожая
-                .navigation__item Ванная
-                .navigation__item Гостиная
-                .navigation__item Спальня
+                button.header__navigation-hamburer-btn.js-hamburger-btn 
+                    +svg('grid-fill', ' hamburer-btn--desktop')
+                    +svg('grid-stroke', ' hamburer-btn--mobile') 
+                    
+   
+                    .span Каталог
+                    +svg('chevron-right', ' hamburer-shevron--mobile')
+                a.navigation__item--mobile.navigation__registration-mobile(href="#") 
+                    +svg('user')
+                    | Вход и регистрация
+                a.navigation__item--mobile.navigation__favorites-mobile(href="#") 
+                    +svg('heart-stroke')
+                    | Избранное
+                a.navigation__item--mobile.navigation__plan-mobile(href="#") 
+                    +svg('plan')
+                    | План работ
+                a.navigation__item--mobile.navigation__location-mobile(href="#") 
+                    +svg('map-pin')
+                    | Санкт-Петербург
+                a.navigation__item(href="#") Кухня
+                a.navigation__item(href="#") Прихожая
+                a.navigation__item(href="#") Ванная
+                a.navigation__item(href="#") Гостиная
+                a.navigation__item(href="#") Спальня
 
 
 

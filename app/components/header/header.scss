@@ -33,6 +33,10 @@
         display: none;
     }
 
+    .hamburer-shevron--mobile {
+        display: none;
+    }
+
     .header__logo-svg {
         width: 192px;
         height: 24px;
@@ -142,6 +146,7 @@
     }
 
     &__navigation-hamburer-btn {
+        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -164,6 +169,10 @@
 
         color: $white;
         fill: $white;
+
+        .hamburer-btn--mobile {
+            display: none;
+        }
 
         & svg {
             width: 16px;
@@ -200,6 +209,10 @@
                 transform: translateX(-50%);
             }
         }
+
+        .navigation__item--mobile {
+            display: none;
+        }
     }
 
 
@@ -210,7 +223,7 @@
         min-width: 324px;
         min-height: 125px;
 
-        z-index: 2;
+        z-index: -1;
    /*      top: 39px;
         left: -24px; */
 
@@ -294,6 +307,7 @@
 
     .header__location-popup--show {
         opacity: 1;
+        z-index: 2;
     }
 
 }
@@ -331,7 +345,7 @@
             margin-right: 0;
         }
     
-        .header__hamburger-btn-mobile {
+/*         .header__hamburger-btn-mobile {
             cursor: pointer;
             display: block;
             background-color: transparent;
@@ -343,8 +357,49 @@
             svg {
                 width: 20px;
                 height: 20px;
+                
+            }
+        } */
+
+        .header__hamburger-btn-mobile {
+            display: block;
+            cursor: pointer;
+            background-color: inherit;
+            border: none;
+            width: 36px;
+            padding: 0;
+            margin-top: 5px;
+
+            .bar1, .bar2, .bar3 {
+                width: 16px;
+                height: 2px;
+                background-color: white;
+                margin: 3px 0;
+                transition: 0.4s;
+                background-color: black;
+               
+              }
+            .bar2 {
+                margin: 0;  
             }
         }
+
+        .change .bar1 {
+            transform: rotate( -45deg ) translate(-3px, 4px);
+          }
+        
+          .change .bar2 {
+              opacity: 0;
+            }
+        
+        
+        .change .bar3 {
+            transform: rotate(45deg) translate(-3px, -5px);
+          }
+
+
+
+
     
         .header__logo-svg {
             width: 127px;
@@ -406,7 +461,8 @@
         }
     
         &__navigation-container {
-            /* display: none; */
+            opacity: 0;
+            z-index: -5;
             border: 1px solid red;
             top: 55px;
             display: flex;
@@ -424,58 +480,120 @@
         }
     
         &__navigation-hamburer-btn {
+            order: 2;
+            margin-bottom: 17px;
+            position: relative;
+
+
+
+            cursor: pointer;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            width: 112px;
+            width: 100%;
             padding-left: 10px;
             padding-right: 12px;
             height: 36px;
-            margin-right: 47px;
+
     
             background: transparent;
             border: none;
-            border-radius: 6px;
-    
-    
             @include body-regular;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 44px;
+                bottom: -11px;
+                height: 1px;
+                width: 100%;
+                background-color: $grey-border;
+            }
+
             .hamburer-btn--desktop {
                 display: none;
             }
+
+            .hamburer-btn--mobile {
+                display: block;
+
+                
+            }
+            .hamburer-shevron--mobile {
+                display: block;
+                stroke: $black;
+                position: absolute;
+                right: 10px;
+            }
     
             & svg {
-                width: 16px;
-                height: 16px;
-                margin-right: 9px;
+                width: 20px;
+                height: 20px;
+                
+                margin-right: 14px;
             }
         }
     
     
         .navigation {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: flex-start;
-    
+ 
+            padding: 20px 15px;
     
             &__item {
-                @include subheader;
+                    display: none;
+            }
+
+            .navigation__item--mobile {
+                margin-bottom: 17px;
                 position: relative;
-                margin-right: 49px;
+
                 cursor: pointer;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                padding-left: 10px;
+                padding-right: 12px;
+               
+                height: 36px;
     
-    
-                &:hover::after {
+        
+                background: transparent;
+                border: none;
+                @include body-regular;
+
+
+                &:not(:nth-child(5))::after {
                     content: '';
-                    width: 30px;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $blue;
-    
                     position: absolute;
-                    bottom: -16px;
-                    left: 50%;
-                    transform: translateX(-50%);
+                    left: 44px;
+                    bottom: -10px;
+                    height: 1px;
+                    width: 89%;
+                    background-color: $grey-border;
+                }
+    
+                & svg {
+                    width: 20px;
+                    height: 20px;
+                    stroke: $black;
+                    margin-right: 14px;
+                }
+
+                &.navigation__registration-mobile {
+                    order: 1;
+                }
+
+                &.navigation__favorites-mobile {
+                    order: 3;
+                }
+
+                &.navigation__plan-mobile {
+                    order: 4;
+                }
+
+                &.navigation__location-mobile{
+                    order: 5;
                 }
             }
         }
@@ -484,6 +602,13 @@
 
         .header__location-popup--show {
             opacity: 1;
+            z-index: 2;
+        }
+
+
+        .header__navigation-container.show {
+            opacity: 1;
+            z-index: 2;
         }
     
     }

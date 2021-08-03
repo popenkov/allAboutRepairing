@@ -16,9 +16,9 @@
       <div class="header__container"> 
         <div class="header__container-top">
           <button class="header__hamburger-btn-mobile">
-            <svg class="icon menu header__hamburger-btn-mobile-svg">
-              <use xlink:href="#menu"></use>
-            </svg>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
           </button><a class="header__logo" href="index.html"> 
             <svg class="icon logo header__logo-svg">
               <use xlink:href="#logo"></use>
@@ -44,21 +44,31 @@
           <button class="header__log-in-btn">Войти</button>
         </div>
         <div class="header__navigation-container">
-          <button class="header__navigation-hamburer-btn js-hamburger-btn"> 
-            <svg class="icon grid-fill hamburer-btn--desktop">
-              <use xlink:href="#grid-fill"></use>
-            </svg>
-            <svg class="icon grid-stroke hamburer-btn--mobile">
-              <use xlink:href="#grid-stroke"></use>
-            </svg>
-            <div class="span">Каталог</div>
-          </button>
           <navigation class="header__navigation navigation">
-            <div class="navigation__item">Кухня</div>
-            <div class="navigation__item">Прихожая</div>
-            <div class="navigation__item">Ванная</div>
-            <div class="navigation__item">Гостиная</div>
-            <div class="navigation__item">Спальня</div>
+            <button class="header__navigation-hamburer-btn js-hamburger-btn"> 
+              <svg class="icon grid-fill hamburer-btn--desktop">
+                <use xlink:href="#grid-fill"></use>
+              </svg>
+              <svg class="icon grid-stroke hamburer-btn--mobile">
+                <use xlink:href="#grid-stroke"></use>
+              </svg>
+              <div class="span">Каталог</div>
+              <svg class="icon chevron-right hamburer-shevron--mobile">
+                <use xlink:href="#chevron-right"></use>
+              </svg>
+            </button><a class="navigation__item--mobile navigation__registration-mobile" href="#"> 
+              <svg class="icon user">
+                <use xlink:href="#user"></use>
+              </svg>Вход и регистрация</a><a class="navigation__item--mobile navigation__favorites-mobile" href="#"> 
+              <svg class="icon heart-stroke">
+                <use xlink:href="#heart-stroke"></use>
+              </svg>Избранное</a><a class="navigation__item--mobile navigation__plan-mobile" href="#"> 
+              <svg class="icon plan">
+                <use xlink:href="#plan"></use>
+              </svg>План работ</a><a class="navigation__item--mobile navigation__location-mobile" href="#"> 
+              <svg class="icon map-pin">
+                <use xlink:href="#map-pin"></use>
+              </svg>Санкт-Петербург</a><a class="navigation__item" href="#">Кухня</a><a class="navigation__item" href="#">Прихожая</a><a class="navigation__item" href="#">Ванная</a><a class="navigation__item" href="#">Гостиная</a><a class="navigation__item" href="#">Спальня</a>
           </navigation>
         </div>
         <div class="header__location-popup"> 
