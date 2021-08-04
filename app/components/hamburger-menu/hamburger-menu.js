@@ -101,7 +101,7 @@ const showMenu = () => {
     menuContainer.classList.toggle('show');
     document.querySelector('.header-wrapper').classList.toggle('body__black-bg');
    /*  siteBody.classList.toggle('body__black-bg'); */
-   main.classList.toggle('hide');
+  /*  main.classList.toggle('hide'); */
 }
 
 
@@ -112,124 +112,13 @@ const showMenu = () => {
 
 	hamburgerMenu.classList.remove('hamburger-show');
 
-	  /*  if(menuContainer.classList.contains('show')) {
-        main.style.display =  'none';
-    } else {
-        main.style.display =  'block';
-    } */
-
-	
-
-
-
 })
 
-/* 	const mobileCatalogBtn = document.querySelector('.hamburer-btn--mobile');
-	!!mobileCatalogBtn & mobileCatalogBtn.addEventListener('click', () => {
-		console.log('click')
-		hamburgerMenu.classList.toggle('.mobile-menu--show ');
-	})
- */
 
-
-/* 	const leftMenuItems = document.querySelectorAll('.hamburger__left-menu-item')
-	const rightMenuContainerItems = document.querySelectorAll('.hamburger__right-menu-item')
-
-	const hideRightMenuItems = () => {
-		rightMenuContainerItems.forEach(item => {
-			item.style.display = 'none';
-		})
+window.addEventListener('resize', function () {
+	if (clientWidth >= MAX_MOBILE_WIDTH) {
+		menuContainer.classList.remove('show');
+		headerButtonMobile.classList.remove("change");
+		document.querySelector('.header-wrapper').classList.remove('body__black-bg');
 	}
-
-
-	leftMenuItems.forEach(item => {
-		item.querySelector('a').addEventListener('mouseover', (e) => {
-			hideRightMenuItems();
-			let index = e.target.href;
-			console.log(index)
-
-		})
-	})
-	leftMenuItems[0].classList.add('select');
-	rightMenuContainerItems[0].style.display = 'block';
-
-
-
-	/*
-	$('.tab-nav a').mouseover(function(){ 
-	  $('.tab-panels>div').hide().filter(this.hash).show();
-	  $('.tab-nav li').removeClass('select'); 
-	  $(this).parent().addClass('select');
-	  return (false);
-	})
-   */
-
-
-
-
-/* 
-
-
-	const catalogButton = document.querySelector('.js-hamburger-btn');
-	const hamburgerMenu = document.querySelector('.js-hamburger-menu');
-	
-	!!catalogButton & catalogButton.addEventListener('click', () => {
-		hamburgerMenu.classList.toggle('hamburger-show');
-
-
-		const leftMenuSwiper = new Swiper('.hamburger__left-menu', {
-			direction: 'vertical',
-			slidesPerView: 1,
-		   slidesPerView: 'auto',
-		   allowTouchMove: false,
-		  loop: false,
-		  slideActiveClass: 'swiper-slide-active',
-		   	 
-		   scrollbar: {
-			 el: '.swiper-scrollbar',
-			 draggable: true,
-			 hide: true,
-		   },
-
-
-		   
-		 });
-
-		
-		 const leftSwiperSlides = document.querySelectorAll('.hamburger__left-menu .swiper-wrapper .swiper-slide');
-		 leftMenuSwiper.on('click', function (e) {
-			leftSwiperSlides.forEach(item => {
-				item.classList.remove('swiper-slide-active');
-			})
-			 let target = e.target;
-			 target.classList.add('swiper-slide-active')
-		  });
-
-		  
-
-
-
-
-		 
-	 
-		 const rightMenuSwiper = new Swiper('.hamburger__right-menu', {
-		   
-		   slidesPerView: 1,
-		   spaceBetween: 50,
-		   direction: 'vertical',
-		   allowTouchMove: false,
-			 loop: false,
-			 thumbs: {
-			 swiper: leftMenuSwiper,
-			 },
-	 
-	 
-	 
-		 });
-	})
-	
-
-
-	
-	
-	 */
+})
