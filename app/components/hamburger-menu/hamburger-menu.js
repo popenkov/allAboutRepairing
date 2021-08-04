@@ -7,8 +7,9 @@
 	!!catalogButton & catalogButton.addEventListener('click', () => {
 		console.log('click')
 		hamburgerMenu.classList.toggle('hamburger-show');
-		siteBody.classList.toggle('body__no-scroll');
-
+		document.querySelector('.header-wrapper').classList.toggle('body__black-bg');
+		/* hamburgerMenu.classList.toggle('body__black-bg'); */
+		
 	
 	
 	});
@@ -98,8 +99,9 @@ const toogleHamburger=() => {
 
 const showMenu = () => {
     menuContainer.classList.toggle('show');
-    siteBody.classList.toggle('body__no-scroll');
-
+    document.querySelector('.header-wrapper').classList.toggle('body__black-bg');
+   /*  siteBody.classList.toggle('body__black-bg'); */
+   main.classList.toggle('hide');
 }
 
 

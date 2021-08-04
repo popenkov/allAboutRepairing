@@ -28,7 +28,15 @@ body {
 .body__no-scroll {
     height: 100%;
     overflow: hidden;
+    z-index: 2;
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.body__black-bg {
+    z-index: 5;
+    /* background-color: rgba(0, 0, 0, 0.8);   */
+    position: relative;
+    box-shadow: 0 0 0 9999px rgba(0,0,0, 0.8);
 }
 
 

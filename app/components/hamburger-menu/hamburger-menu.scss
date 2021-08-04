@@ -82,15 +82,15 @@
     }
 
     .hamburger__right-menu {
-        height: 636px;
+       /*  height: 636px; */
         min-height: 636px;
         width: 80%;
         padding-left: 44px;
         padding-top: 24px;
 
         .hamburger__right-menu-item {
-            height: 636px;
-            overflow-y: scroll;
+            /* height: 636px;
+            overflow-y: scroll; */
         }
 
 
@@ -277,15 +277,24 @@
 .hamburger-show {
     position:absolute;
     display: flex;
-    z-index: 2;
-    width: 92%;
+    z-index: 5;
+    /* width: 92%; */
     top: 125px;
     left: 50%;
     transform: translateX(-50%);
     background-color: white;
 
+
+    width: 100%;
+    max-width: unset;
+    padding: 0 4% ;
+
     @media (max-width: $maxTabletValue) {
-        width: 91.1%;
+        /* width: 91.1%; */
+
+        width: 100%;
+        max-width: unset;
+        padding: 0 4.45%;
     }
 
     @media (max-width: $maxMobileValue) {

@@ -38,11 +38,8 @@ const sliderInit = () => {
 
 const swiperDestroy = () => {
     console.log('swiperDestroy', popArticlesSwiper)
-    popArticlesSwiper.destroy();
-    popArticlesSwiper.data('swiper').destroy();
-    popArticlesSwiper.swiper().destroy();
+    popArticlesSwiper.destroy(false, true);
 
-    popArticlesSwiper = null;
     swiperContainer.classList.add('pop-articles--no-swiper');
     /* swiperWrapper.style.transform = 'translate3d(0px, 0px, 0px);'; */
     swiperWrapper.removeAttribute('style');
@@ -59,9 +56,9 @@ if (clientWidth< MAX_MOBILE_WIDTH && !swiperContainer.classList.contains('swiper
 const resizeHandlerSlider = () => {
     let { clientWidth } = document.body;
     console.log(clientWidth);
-    if (clientWidth< MAX_MOBILE_WIDTH) {
+    if (clientWidth< MAX_MOBILE_WIDTH && !swiperContainer.classList.contains('swiper-container-initialized')) {
         sliderInit();
-    } else /* if (clientWidth >= MAX_MOBILE_WIDTH && swiperContainer.classList.contains('swiper-container-initialized')) */ {
+    } else if (clientWidth >= MAX_MOBILE_WIDTH && swiperContainer.classList.contains('swiper-container-initialized')) {
 
         swiperDestroy(); 
     }
@@ -70,6 +67,3 @@ const resizeHandlerSlider = () => {
 window.addEventListener('resize', resizeHandlerSlider);
 
 
-
-
-console.log(clientWidth);
