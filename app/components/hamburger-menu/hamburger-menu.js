@@ -88,6 +88,7 @@ const headerLocationPopup = document.querySelector('.header__location-popup');
 const headerButtonMobile = document.querySelector('.header__hamburger-btn-mobile');
 const menuContainer = document.querySelector('.header__navigation-container');
 const main = document.querySelector('main');
+const footer = document.querySelector('footer');
 const siteBody = document.querySelector('body');
  
 
@@ -101,7 +102,8 @@ const showMenu = () => {
     menuContainer.classList.toggle('show');
     document.querySelector('.header-wrapper').classList.toggle('body__black-bg');
    /*  siteBody.classList.toggle('body__black-bg'); */
-  /*  main.classList.toggle('hide'); */
+   main.classList.toggle('hide');
+   footer.classList.toggle('hide');
 }
 
 
