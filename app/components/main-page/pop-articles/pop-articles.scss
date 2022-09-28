@@ -1,420 +1,395 @@
 .pop-articles {
-    width: 100%;
-    margin-bottom: 48px;
+  width: 100%;
+  margin-bottom: 48px;
 
+  .pop-articles__container {
+    margin: 0 auto;
+    max-width: 1180px;
+    width: 92%;
+    position: relative;
 
-    
-    .pop-articles__container {
-        margin: 0 auto;
-        max-width: 1180px;
-        width: 92%;
-        position: relative;
+    .pop-articles__item-link {
+      display: block;
+    }
+  }
 
-        .pop-articles__item-link {
-            display: block;
-        }
+  .pop-articles__title {
+    @include header-3;
+    margin-top: 44px;
+    margin-bottom: 23px;
+  }
+
+  .pop-articles__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .pop-articles__item {
+    height: 331px;
+    display: block;
+    /*  margin: 5px; */
+    /* margin-right: 25px; */
+    margin-bottom: 25px;
+
+    background-color: #f5f5f5;
+
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    position: relative;
+
+    .pop-articles__add-to-fav {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      width: 32px;
+      height: 32px;
+      background-color: rgba(17, 17, 17, 0.5);
+
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+
+      .pop-articles__fav-icon {
+        stroke: $white;
+        stroke-width: 1.33333px;
+      }
     }
 
-    .pop-articles__title {
-        @include header-3;
-        margin-top: 44px;
-        margin-bottom: 23px;
-
-
-
+    &:hover .pop-articles__add-to-fav {
+      display: flex;
     }
+  }
 
-    .pop-articles__items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+  .pop-articles__item--wide-mobile {
+    display: none;
+  }
 
-    .pop-articles__item {
-        height: 331px;
+  .pop-articles__item--wide {
+    max-width: 577px;
+    width: 49%;
+    min-width: 470px;
+    display: flex;
+
+    .pop-articles__image-wide {
+      width: 50%;
+      height: 331px;
+      background-image: url('../../../assets/images/Rectangle 6.jpg');
+      background-size: contain;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      line-height: 0;
+
+      &::after {
+        content: '';
         display: block;
-       /*  margin: 5px; */
-        /* margin-right: 25px; */
-        margin-bottom: 25px;
-   
-        background-color: #F5F5F5;
-
-
-        border: 1px solid #E0E0E0;
-        box-sizing: border-box;
-        border-radius: 8px;
-
-        position: relative;
-
-        .pop-articles__add-to-fav {
-            display: none;
-            cursor: pointer;
-            position: absolute;
-            top: 6px;
-            right: 8px;
-            width: 32px;
-            height: 32px;
-            background-color: rgba(17, 17, 17, .5);
-           
-            justify-content: center;
-            align-items: center;
-            border-radius: 4px;
-
-            .pop-articles__fav-icon {
-                stroke: $white;
-                stroke-width: 1.33333px;
-            }
-        }
-        
-        &:hover .pop-articles__add-to-fav {
-            display: flex;
-        }
-
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+        background-image: linear-gradient(
+          90.01deg,
+          rgba(245, 245, 245, 0) 50.21%,
+          #f5f5f5 99.99%
+        );
+        /* opacity: 0.8; */
+      }
     }
 
-    .pop-articles__item--wide-mobile {
-        display: none;
+    .pop-articles__text-container {
+      width: 50%;
+      height: 100%;
+      margin-left: auto;
+      padding: 13px;
+      padding-top: 87px;
+
+      display: flex;
+      flex-direction: column;
+
+      .pop-articles__article-title {
+        margin-bottom: 16px;
+      }
     }
+  }
 
-    .pop-articles__item--wide {
-        max-width: 577px;
-        width: 49%;
-        min-width: 470px;
-        display: flex;
-       
-        .pop-articles__image-wide {
-            width: 50%;
-            height: 331px;
-            background-image: url('../../../assets/images/Rectangle 6.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            position: relative;    
-            line-height: 0;
-            
-            &::after {
-                content: "";
-                display: block;    
-                width: 100%;
-                height: 100%;    
-                position: absolute;
-                top: 0;      
-                left: 0;   
-                background: transparent;
-                background-image: linear-gradient(90.01deg, rgba(245, 245, 245, 0) 50.21%, #F5F5F5 99.99%);;
-                /* opacity: 0.8; */
-            }
-        }
+  .pop-articles__item--narrow {
+    max-width: 276px;
+    width: 23.4%;
+    min-width: 228px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
 
-
-        .pop-articles__text-container {
-            width: 50%;
-            height: 100%;
-            margin-left: auto;
-            padding: 13px;
-            padding-top: 87px;
-
-            display: flex;
-            flex-direction: column;
-
-
-            .pop-articles__article-title {
-                margin-bottom: 16px;
-            }
-        }
-    }
-
-    .pop-articles__item--narrow {
-        max-width: 276px;
-        width: 23.4%;
-        min-width: 228px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-start;
-
-
-        .pop-articles__text-container {
-/*             height: 100%;
+    .pop-articles__text-container {
+      /*             height: 100%;
             margin-left: auto; */
-            padding: 13px;
-            padding-top: 75px;
+      padding: 13px;
+      padding-top: 75px;
 
-            display: flex;
-            flex-direction: column;
-        }
-
-        .pop-articles__article-title {
-            margin-bottom: 10px;
-        }
-
-
+      display: flex;
+      flex-direction: column;
     }
 
     .pop-articles__article-title {
-        @include header-4;
-        
+      margin-bottom: 10px;
+    }
+  }
+
+  .pop-articles__article-title {
+    @include header-4;
+  }
+
+  .pop-articles__description {
+    @include grey-text;
+  }
+
+  .pop-articles__likeNviews {
+    margin-top: auto;
+
+    display: flex;
+    align-items: center;
+
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+
+    .icon {
+      margin-right: 2px;
     }
 
-    .pop-articles__description {
-        @include grey-text;
+    .pop-articles__likes {
+      display: flex;
+      align-items: center;
+
+      margin-right: 22px;
+
+      .pop-articles__like-icon {
+        width: 12px;
+        height: 12px;
+      }
     }
 
-    .pop-articles__likeNviews  {
-        margin-top: auto;
+    .pop-articles__views {
+      display: flex;
+      align-items: center;
 
-        display: flex;
-        align-items: center;
-
-        font-family: 'Rubik';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 14px;
-
-        .icon {
-            margin-right: 2px;
-        }
-
-        .pop-articles__likes {
-            display: flex;
-            align-items: center;
-
-            margin-right: 22px;
-
-            .pop-articles__like-icon {
-                width: 12px;
-                height: 12px; 
-            }
-
-        }
-
-        .pop-articles__views {
-            display: flex;
-            align-items: center;
-            
-            .pop-articles__views-icon {
-                width: 12px;
-                height: 12px; 
-            }
-        }
-
+      .pop-articles__views-icon {
+        width: 12px;
+        height: 12px;
+      }
     }
+  }
 
+  .pop-articles__item--2 {
+    background-image: url('../../../assets/images/Rectangle 6 copy.jpg');
+    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-    .pop-articles__item--2 {
-        background-image: url('../../../assets/images/Rectangle 6 copy.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+  .pop-articles__item--3 {
+    margin-right: 0;
+    background-image: url('../../../assets/images/Rectangle 6-1 copy.jpg');
+    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-    .pop-articles__item--3 {
-        margin-right: 0;
-        background-image: url('../../../assets/images/Rectangle 6-1 copy.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+  .pop-articles__item--4 {
+    margin-bottom: 0;
+    background-image: url('../../../assets/images/Rectangle 6 copy.jpg');
+    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-    .pop-articles__item--4 {
-        margin-bottom: 0;
-        background-image: url('../../../assets/images/Rectangle 6 copy.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+  .pop-articles__item--5 {
+    margin-bottom: 0;
+    background-image: url('../../../assets/images/Rectangle 6-1 copy.jpg');
+    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-    .pop-articles__item--5 {
-        margin-bottom: 0;
-        background-image: url('../../../assets/images/Rectangle 6-1 copy.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+  .pop-articles__item--6 {
+    margin-bottom: 0;
+    background-image: url('../../../assets/images/Rectangle 6 copy.jpg');
+    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-    .pop-articles__item--6 {
-        margin-bottom: 0;
-        background-image: url('../../../assets/images/Rectangle 6 copy.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+  .pop-articles__item--7 {
+    margin-right: 0;
+    margin-bottom: 0;
+    background-image: url('../../../assets/images/Rectangle 6-1 copy.jpg');
+    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-    .pop-articles__item--7 {
-        margin-right: 0;
-        margin-bottom: 0;
-        background-image: url('../../../assets/images/Rectangle 6-1 copy.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-
-    .pop-articles--no-swiper {
-        /* adaptive */
-        height: 698px;
-    }
-
+  .pop-articles--no-swiper {
+    /* adaptive */
+    height: 698px;
+  }
 }
-
-
-
 
 @media (max-width: $maxTabletValue) {
-    .pop-articles {
-        .pop-articles__items {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            justify-content: flex-start;
-            height: auto;
-        }
-    
-        .pop-articles__item {
-            margin: 5px;
-            margin-bottom: 25px;
-            width: auto;
-        }
-
-
-        .pop-articles__item--wide {
-            /* max-width: 577px;
-            width: 49%; */
-            min-width: 470px;
-
-            max-width: unset;
-            width: 63%;
-            display: flex;
-
-        }
-    
-        .pop-articles__item--narrow {
-            /* max-width: 276px; */
-           /*  width: 23.4%; */
-          /*  min-width: 228px; */
-           min-width: 228px; 
-           max-width: unset;
-            width: 31%;
-            
-    
-        }
-
-        .pop-articles--no-swiper {
-            /* adaptive */
-            height: auto;
-        }
+  .pop-articles {
+    .pop-articles__items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      justify-content: flex-start;
+      height: auto;
     }
-    
 
+    .pop-articles__item {
+      margin: 5px;
+      margin-bottom: 25px;
+      width: auto;
+    }
 
+    .pop-articles__item--wide {
+      /* max-width: 577px;
+            width: 49%; */
+      min-width: 470px;
+
+      max-width: unset;
+      width: 63%;
+      display: flex;
+    }
+
+    .pop-articles__item--narrow {
+      /* max-width: 276px; */
+      /*  width: 23.4%; */
+      /*  min-width: 228px; */
+      min-width: 228px;
+      max-width: unset;
+      width: 31%;
+    }
+
+    .pop-articles--no-swiper {
+      /* adaptive */
+      height: auto;
+    }
+  }
 }
 
-
 @media (max-width: $maxMobileValue) {
-    .pop-articles {
+  .pop-articles {
+    width: 100%;
+    margin-bottom: 33px;
+    .pop-articles__container {
+      width: 92%;
+
+      .pop-articles__item-link {
+        display: block;
+      }
+    }
+
+    .pop-articles__title {
+      margin-top: 33px;
+      margin-bottom: 16px;
+    }
+
+    .pop-articles__items {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .swiper-container-initialized {
+      margin-top: 16px;
+      height: 331px;
+    }
+
+    .swiper-container-initialized .pop-articles__items {
+      flex-wrap: nowrap;
+      width: 100%;
+
+      .pop-articles__item {
+        margin: 0;
         width: 100%;
-        margin-bottom: 33px;
-        .pop-articles__container {
-           width: 92%;
-    
-            .pop-articles__item-link {
-                display: block;
-            }
-        }
-    
-        .pop-articles__title {
-            margin-top: 33px;
-            margin-bottom: 16px;
-    
-    
-    
-        }
-    
-        .pop-articles__items {
-            display: flex;
-            flex-wrap: wrap;
-        }
+        height: 331px;
 
-        .swiper-container-initialized {
-            margin-top: 16px;
-            height: 331px;
+        .pop-articles__add-to-fav {
+          top: 8px;
+          right: 6px;
+          width: 38px;
+          height: 38px;
         }
+      }
+    }
 
-        .swiper-container-initialized .pop-articles__items {
-            flex-wrap: nowrap;
-            width: 100%;
+    .pop-articles__item {
+      height: 331px;
+      display: block;
+      margin-right: 25px;
+      margin-bottom: 25px;
 
-            .pop-articles__item {
-                margin: 0;
-                width: 100%;
-                height: 331px;
+      background-color: #f5f5f5;
 
+      border: 1px solid #e0e0e0;
+      box-sizing: border-box;
+      border-radius: 8px;
 
-                .pop-articles__add-to-fav {
-                    top: 8px;
-                    right: 6px;
-                    width: 38px;
-                    height: 38px;
-  
-                }
-            }
+      position: relative;
+
+      .pop-articles__add-to-fav {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        top: 6px;
+        right: 8px;
+        width: 32px;
+        height: 32px;
+        background-color: rgba(17, 17, 17, 0.5);
+
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+
+        .pop-articles__fav-icon {
+          stroke: $white;
+          stroke-width: 1.33333px;
         }
-    
-        .pop-articles__item {
-            height: 331px;
-            display: block;
-            margin-right: 25px;
-            margin-bottom: 25px;
-       
-            background-color: #F5F5F5;
-    
-    
-            border: 1px solid #E0E0E0;
-            box-sizing: border-box;
-            border-radius: 8px;
-    
-            position: relative;
-    
-            .pop-articles__add-to-fav {
-                display: none;
-                cursor: pointer;
-                position: absolute;
-                top: 6px;
-                right: 8px;
-                width: 32px;
-                height: 32px;
-                background-color: rgba(17, 17, 17, .5);
-               
-                justify-content: center;
-                align-items: center;
-                border-radius: 4px;
-    
-                .pop-articles__fav-icon {
-                    stroke: $white;
-                    stroke-width: 1.33333px;
-                }
-            }
-            
-            &:hover .pop-articles__add-to-fav {
-                display: flex;
-            }
-    
-        }
+      }
 
-        .pop-articles__item--wide {
-            display: none;
-        }
+      &:hover .pop-articles__add-to-fav {
+        display: flex;
+      }
+    }
 
-        .pop-articles__item--wide-mobile {
-            max-width: unset;
-            width: 100%;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-           
-            .pop-articles__image-wide {
-                width: 100%;
-                height: 331px;
-                background-image: url('../../../assets/images/Rectangle 6.png');
-                background-size: cover;
-                background-repeat: no-repeat;
-                position: relative;    
-                line-height: 0;
-                
-            /*     &::after {
+    .pop-articles__item--wide {
+      display: none;
+    }
+
+    .pop-articles__item--wide-mobile {
+      max-width: unset;
+      width: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+
+      .pop-articles__image-wide {
+        width: 100%;
+        height: 331px;
+        background-image: url('../../../assets/images/Rectangle 6.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        line-height: 0;
+
+        /*     &::after {
                     content: "";
                     display: block;    
                     width: 100%;
@@ -425,63 +400,52 @@
                     background: transparent;
                     background-image: linear-gradient(90.01deg, rgba(245, 245, 245, 0) 50.21%, #F5F5F5 99.99%);;
                     /* opacity: 0.8; */
-                /*} */
-            }
-    
-    
-            .pop-articles__text-container {
-                width: 100%;
-                height: 100%;
-                padding: 13px;
-                padding-top: 7px;
-                /* padding-top: 87px; */
-    
-                display: flex;
-                flex-direction: column;
-    
-    
-                .pop-articles__article-title {
-                    margin-bottom: 16px;
-                }
+        /*} */
+      }
 
-                .pop-articles__description {
-                    -webkit-line-clamp: 4; 
-                    display: -webkit-box; 
-                    -webkit-box-orient: vertical; 
-                    overflow: hidden;
-                }
-            }
-        }
-    
-        .pop-articles__item--narrow {
-            max-width: unset;
-            width: 23.4%;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-start;
-    
-    
-            .pop-articles__text-container {
-    /*             height: 100%;
-                margin-left: auto; */
-                padding: 13px;
-                padding-top: 75px;
-    
-                display: flex;
-                flex-direction: column;
-            }
-    
-            .pop-articles__article-title {
-                margin-bottom: 10px;
-            }
-    
-    
+      .pop-articles__text-container {
+        width: 100%;
+        height: 100%;
+        padding: 13px;
+        padding-top: 7px;
+        /* padding-top: 87px; */
+
+        display: flex;
+        flex-direction: column;
+
+        .pop-articles__article-title {
+          margin-bottom: 16px;
         }
 
-    
+        .pop-articles__description {
+          -webkit-line-clamp: 4;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      }
     }
 
+    .pop-articles__item--narrow {
+      max-width: unset;
+      width: 23.4%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
 
+      .pop-articles__text-container {
+        /*             height: 100%;
+                margin-left: auto; */
+        padding: 13px;
+        padding-top: 75px;
 
-    
+        display: flex;
+        flex-direction: column;
+      }
+
+      .pop-articles__article-title {
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
