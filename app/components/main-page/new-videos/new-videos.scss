@@ -1,511 +1,459 @@
 .new-videos {
+  width: 100%;
 
-    width: 100%;
+  .new-videos__slider-swiper {
+    overflow-x: hidden;
+  }
 
-    .new-videos__container {
-        margin: 0 auto;
-        max-width: 1180px;
-        min-width: 414px;
-        width: 92%;
-        height: 355px;
-        position: relative;
+  .new-videos__container {
+    margin: 0 auto;
+    max-width: 1180px;
+    min-width: 414px;
+    width: 92%;
+    height: 355px;
+    position: relative;
 
     .swiper-slide {
-        height: 323px;
+      height: 323px;
     }
 
     .new-videos__title {
-        @include header-3;
-        margin-top: 47px;
-        margin-bottom: 25px;
+      @include header-3;
+      margin-top: 47px;
+      margin-bottom: 25px;
     }
 
     .new-videos__slider-button {
-        display: none;
-        cursor: pointer;
-        width: 44px;
-        height: 44px;
-        
-        justify-content: center;
-        align-items: center;
-        background: $white;
+      display: none;
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
 
-        position: absolute;
-        z-index: 2;
-        top: 160px;
-        /* item hover */
+      justify-content: center;
+      align-items: center;
+      background: $white;
 
-        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
-        border-radius: 22px;
+      position: absolute;
+      z-index: 2;
+      top: 160px;
+      /* item hover */
+
+      box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
+      border-radius: 22px;
     }
-
 
     .new-videos__slider-button-prev {
-        left: -54px;
-    }
-    
-    .new-videos__slider-button-next {
-        right: -54px;
+      left: -54px;
     }
 
+    .new-videos__slider-button-next {
+      right: -54px;
+    }
 
     .new-videos__slider-button-svg {
-        stroke: $blue;
-        stroke-width: 2.66667px;
-        width: 32px;
-        height: 32px;
+      stroke: $blue;
+      stroke-width: 2.66667px;
+      width: 32px;
+      height: 32px;
     }
-
 
     .new-videos__item {
-        max-width: 277px;
-        height: 323px;
+      max-width: 277px;
+      height: 323px;
+      display: flex;
+      flex-direction: column;
+
+      .new-videos__add-to-fav {
+        position: absolute;
+        z-index: 1;
+        right: 1px;
+        top: 1px;
+        width: 32px;
+        height: 32px;
+        background: rgba(17, 17, 17, 0.5);
+        border-radius: 4px;
+
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        stroke: $white;
+      }
+
+      &:hover .new-videos__add-to-fav {
+        display: flex;
+      }
+
+      .new-videos__item-photo {
+        width: 100%;
+        height: 175px;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+      }
+
+      .new-videos__link-to-video {
+        position: relative;
+
+        .new-videos__play-btn {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          .new-videos__youtube-icon {
+            width: 48px;
+            height: 36px;
+            left: 0px;
+            top: 0px;
+
+            background: rgba(17, 17, 17, 0.5);
+            border-radius: 6px;
+
+            &:hover {
+              background: #0a9ce5;
+            }
+          }
+        }
+      }
+
+      .new-videos__item-container {
         display: flex;
         flex-direction: column;
-        
 
+        .new-videos__item-title {
+          @include header-4;
+          padding-top: 9px;
+          padding-bottom: 8px;
+        }
 
-        .new-videos__add-to-fav {
-            position: absolute;
-            z-index: 1;
-            right: 1px;
-            top: 1px;
-            width: 32px;
-            height: 32px;
-            background: rgba(17, 17, 17, .5);
-            border-radius: 4px;
+        .new-videos__likeNviews {
+          margin-top: auto;
 
-            display: none;
+          display: flex;
+          align-items: center;
+
+          font-family: 'Rubik';
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 14px;
+
+          .icon {
+            margin-right: 2px;
+          }
+
+          .new-videos__likes {
+            display: flex;
             align-items: center;
-            justify-content: center;
 
+            margin-right: 19px;
 
-            stroke: $white;
-        }
+            .new-videos__like-icon {
+              width: 12px;
+              height: 12px;
+            }
+          }
 
-        &:hover .new-videos__add-to-fav {
+          .new-videos__views {
             display: flex;
-        }
-        
-        .new-videos__item-photo {
-            width: 100%;
-            height: 175px;
-            object-fit: cover;
-            background-repeat: no-repeat;
-            border-radius: 8px;
-        }
+            align-items: center;
 
-        .new-videos__link-to-video {
-            position: relative;
-
-            .new-videos__play-btn {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-
-
-                .new-videos__youtube-icon {
-                    width: 48px;
-                    height: 36px;
-                    left: 0px;
-                    top: 0px;
-
-
-                    background: rgba(17, 17, 17, .5);
-                    border-radius: 6px;
-
-                    &:hover {
-                        background: #0A9CE5; 
-                    }
-                }
+            .new-videos__views-icon {
+              width: 12px;
+              height: 12px;
             }
+          }
         }
-        
-
-
-        .new-videos__item-container {
-
-            display: flex;
-            flex-direction: column;
-
-
-            .new-videos__item-title {
-                @include header-4;
-                padding-top: 9px;
-                padding-bottom: 8px;
-            }
-
-            .new-videos__likeNviews {
-                margin-top: auto;
-
-                display: flex;
-                align-items: center;
-
-                font-family: 'Rubik';
-                font-style: normal;
-                font-weight: normal;
-                font-size: 12px;
-                line-height: 14px;
-
-                .icon {
-                    margin-right: 2px;
-                }
-
-                .new-videos__likes {
-                    display: flex;
-                    align-items: center;
-
-                    margin-right: 19px;
-
-                    .new-videos__like-icon {
-                        width: 12px;
-                        height: 12px; 
-                    }
-
-                }
-
-                .new-videos__views {
-                    display: flex;
-                    align-items: center;
-                    
-                    .new-videos__views-icon {
-                        width: 12px;
-                        height: 12px; 
-                    }
-                }
-
-            }
-        }
+      }
     }
-}
-
+  }
 }
 
 .new-videos:hover .new-videos__slider-button {
-    display: flex;
+  display: flex;
 }
-
-
 
 @media (max-width: $maxTabletValue) {
-  
+  .new-videos {
+    .new-videos__container {
+      width: 91.1%;
+      overflow: hidden;
+      height: 386px;
 
+      .swiper-slide {
+        height: 323px;
+      }
 
-    .new-videos {
+      .new-videos__title {
+        @include header-3;
+        margin-top: 32px;
+        margin-bottom: 17px;
+      }
 
+      .new-videos__slider-swiper {
+        overflow: visible;
+      }
 
-    
-        .new-videos__container {
-            width: 91.1%;
-            overflow: hidden;
-            height: 386px;
-    
-        .swiper-slide {
-            height: 323px;
+      .new-videos__slider-button {
+        display: none;
+      }
+
+      .new-videos__item {
+        width: 100%;
+        max-width: unset;
+
+        .new-videos__add-to-fav {
+          position: absolute;
+          z-index: 1;
+          right: 1px;
+          top: 1px;
+          width: 32px;
+          height: 32px;
+          background: rgba(17, 17, 17, 0.5);
+          border-radius: 4px;
+
+          display: none;
+          align-items: center;
+          justify-content: center;
+
+          stroke: $white;
         }
-    
-        .new-videos__title {
-            @include header-3;
-            margin-top: 32px;
-            margin-bottom: 17px;
+
+        &:hover .new-videos__add-to-fav {
+          display: flex;
         }
 
-        .new-videos__slider-swiper {
-            overflow: visible;
-        }
-    
-        .new-videos__slider-button {
-            display: none;
+        .new-videos__item-photo {
+          width: 100%;
+          height: 175px;
+          object-fit: cover;
+          background-repeat: no-repeat;
+          border-radius: 8px;
         }
 
-    
-        .new-videos__item {
-            width: 100%;
-            max-width: unset;
-            
-    
-    
-            .new-videos__add-to-fav {
-                position: absolute;
-                z-index: 1;
-                right: 1px;
-                top: 1px;
-                width: 32px;
-                height: 32px;
-                background: rgba(17, 17, 17, .5);
-                border-radius: 4px;
-    
-                display: none;
-                align-items: center;
-                justify-content: center;
-    
-    
-                stroke: $white;
+        .new-videos__link-to-video {
+          position: relative;
+
+          .new-videos__play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            .new-videos__youtube-icon {
+              width: 48px;
+              height: 36px;
+              left: 0px;
+              top: 0px;
+
+              background: rgba(17, 17, 17, 0.5);
+              border-radius: 6px;
+
+              &:hover {
+                background: #0a9ce5;
+              }
             }
-    
-            &:hover .new-videos__add-to-fav {
-                display: flex;
-            }
-            
-            .new-videos__item-photo {
-                width: 100%;
-                height: 175px;
-                object-fit: cover;
-                background-repeat: no-repeat;
-                border-radius: 8px;
-            }
-    
-            .new-videos__link-to-video {
-                position: relative;
-    
-                .new-videos__play-btn {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-    
-    
-                    .new-videos__youtube-icon {
-                        width: 48px;
-                        height: 36px;
-                        left: 0px;
-                        top: 0px;
-    
-    
-                        background: rgba(17, 17, 17, .5);
-                        border-radius: 6px;
-    
-                        &:hover {
-                            background: #0A9CE5; 
-                        }
-                    }
-                }
-            }
-            
-    
-    
-            .new-videos__item-container {
-    
-                display: flex;
-                flex-direction: column;
-    
-    
-                .new-videos__item-title {
-                    @include header-4;
-                    padding-top: 9px;
-                    padding-bottom: 8px;
-                }
-    
-                .new-videos__likeNviews {
-                    margin-top: auto;
-    
-                    display: flex;
-                    align-items: center;
-    
-                    font-family: 'Rubik';
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 12px;
-                    line-height: 14px;
-    
-                    .icon {
-                        margin-right: 2px;
-                    }
-    
-                    .new-videos__likes {
-                        display: flex;
-                        align-items: center;
-    
-                        margin-right: 19px;
-    
-                        .new-videos__like-icon {
-                            width: 12px;
-                            height: 12px; 
-                        }
-    
-                    }
-    
-                    .new-videos__views {
-                        display: flex;
-                        align-items: center;
-                        
-                        .new-videos__views-icon {
-                            width: 12px;
-                            height: 12px; 
-                        }
-                    }
-    
-                }
-            }
+          }
         }
+
+        .new-videos__item-container {
+          display: flex;
+          flex-direction: column;
+
+          .new-videos__item-title {
+            @include header-4;
+            padding-top: 9px;
+            padding-bottom: 8px;
+          }
+
+          .new-videos__likeNviews {
+            margin-top: auto;
+
+            display: flex;
+            align-items: center;
+
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+
+            .icon {
+              margin-right: 2px;
+            }
+
+            .new-videos__likes {
+              display: flex;
+              align-items: center;
+
+              margin-right: 19px;
+
+              .new-videos__like-icon {
+                width: 12px;
+                height: 12px;
+              }
+            }
+
+            .new-videos__views {
+              display: flex;
+              align-items: center;
+
+              .new-videos__views-icon {
+                width: 12px;
+                height: 12px;
+              }
+            }
+          }
+        }
+      }
     }
-    
-    }
+  }
 }
 
-
-
 @media (max-width: $maxMobileValue) {
-    .new-videos {
-        .new-videos__container  {
-            width: 92%;
-            overflow: visible;
-    
-    
-            .new-videos__item {
-                width: 100%;
-                max-width: unset;
-            }
-        }
+  .new-videos {
+    .new-videos__container {
+      width: 92%;
+      overflow: visible;
+
+      .new-videos__item {
+        width: 100%;
+        max-width: unset;
+      }
     }
+  }
 
-    .new-videos {
+  .new-videos {
+    .new-videos__container {
+      width: 92%;
 
+      .swiper-slide {
+        height: 323px;
+      }
 
-    
-        .new-videos__container {
-            width: 92%;
-    
-        .swiper-slide {
-            height: 323px;
-        }
-    
-        .new-videos__title {
-            @include header-3;
-            margin-top: 32px;
-            margin-bottom: 17px;
+      .new-videos__title {
+        @include header-3;
+        margin-top: 32px;
+        margin-bottom: 17px;
+      }
+
+      .new-videos__slider-swiper {
+        overflow: visible;
+      }
+
+      .new-videos__slider-button {
+        display: none;
+      }
+
+      .new-videos__item {
+        width: 100%;
+        max-width: unset;
+
+        .new-videos__add-to-fav {
+          position: absolute;
+          z-index: 1;
+          right: 1px;
+          top: 1px;
+          width: 32px;
+          height: 32px;
+          background: rgba(17, 17, 17, 0.5);
+          border-radius: 4px;
+
+          display: none;
+          align-items: center;
+          justify-content: center;
+
+          stroke: $white;
         }
 
-        .new-videos__slider-swiper {
-            overflow: visible;
-        }
-    
-        .new-videos__slider-button {
-            display: none;
+        &:hover .new-videos__add-to-fav {
+          display: flex;
         }
 
-    
-        .new-videos__item {
-            width: 100%;
-            max-width: unset;
-            
-    
-    
-            .new-videos__add-to-fav {
-                position: absolute;
-                z-index: 1;
-                right: 1px;
-                top: 1px;
-                width: 32px;
-                height: 32px;
-                background: rgba(17, 17, 17, .5);
-                border-radius: 4px;
-    
-                display: none;
-                align-items: center;
-                justify-content: center;
-    
-    
-                stroke: $white;
-            }
-    
-            &:hover .new-videos__add-to-fav {
-                display: flex;
-            }
-            
-            .new-videos__item-photo {
-                width: 100%;
-                height: 175px;
-                object-fit: cover;
-                background-repeat: no-repeat;
-                border-radius: 8px;
-            }
-    
-            .new-videos__link-to-video {
-                position: relative;
-    
-                .new-videos__play-btn {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-    
-    
-                    .new-videos__youtube-icon {
-                        width: 48px;
-                        height: 36px;
-                        left: 0px;
-                        top: 0px;
-    
-    
-                        background: rgba(17, 17, 17, .5);
-                        border-radius: 6px;
-    
-                        &:hover {
-                            background: #0A9CE5; 
-                        }
-                    }
-                }
-            }
-            
-    
-    
-            .new-videos__item-container {
-    
-                display: flex;
-                flex-direction: column;
-    
-    
-                .new-videos__item-title {
-                    @include header-4;
-                    padding-top: 9px;
-                    padding-bottom: 8px;
-                }
-    
-                .new-videos__likeNviews {
-                    margin-top: auto;
-    
-                    display: flex;
-                    align-items: center;
-    
-                    font-family: 'Rubik';
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 12px;
-                    line-height: 14px;
-    
-                    .icon {
-                        margin-right: 2px;
-                    }
-    
-                    .new-videos__likes {
-                        display: flex;
-                        align-items: center;
-    
-                        margin-right: 19px;
-    
-                        .new-videos__like-icon {
-                            width: 12px;
-                            height: 12px; 
-                        }
-    
-                    }
-    
-                    .new-videos__views {
-                        display: flex;
-                        align-items: center;
-                        
-                        .new-videos__views-icon {
-                            width: 12px;
-                            height: 12px; 
-                        }
-                    }
-    
-                }
-            }
+        .new-videos__item-photo {
+          width: 100%;
+          height: 175px;
+          object-fit: cover;
+          background-repeat: no-repeat;
+          border-radius: 8px;
         }
+
+        .new-videos__link-to-video {
+          position: relative;
+
+          .new-videos__play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            .new-videos__youtube-icon {
+              width: 48px;
+              height: 36px;
+              left: 0px;
+              top: 0px;
+
+              background: rgba(17, 17, 17, 0.5);
+              border-radius: 6px;
+
+              &:hover {
+                background: #0a9ce5;
+              }
+            }
+          }
+        }
+
+        .new-videos__item-container {
+          display: flex;
+          flex-direction: column;
+
+          .new-videos__item-title {
+            @include header-4;
+            padding-top: 9px;
+            padding-bottom: 8px;
+          }
+
+          .new-videos__likeNviews {
+            margin-top: auto;
+
+            display: flex;
+            align-items: center;
+
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+
+            .icon {
+              margin-right: 2px;
+            }
+
+            .new-videos__likes {
+              display: flex;
+              align-items: center;
+
+              margin-right: 19px;
+
+              .new-videos__like-icon {
+                width: 12px;
+                height: 12px;
+              }
+            }
+
+            .new-videos__views {
+              display: flex;
+              align-items: center;
+
+              .new-videos__views-icon {
+                width: 12px;
+                height: 12px;
+              }
+            }
+          }
+        }
+      }
     }
-    
-    }
+  }
 }

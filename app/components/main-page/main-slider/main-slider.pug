@@ -5,15 +5,19 @@
           +svg('chevron-left', ' main__slider-button-svg')
       .main-slider-button.main__slider-button-next
           +svg('chevron-right', ' main__slider-button-svg')
-    .main__slider-text
-      p.main__slider-text--bold Планируйте ремонт самостоятельно
-      p.main__slider-text--regular Сотни видов работ с подробными инструкциями и рассчетом примерной стоимости
 
     .swiper-wrapper
       .swiper-slide
-        img.main__slider-swiper-img(src="../../assets/images/rectangle 15.png")
+        .main__slider-container
+          img.main__slider-swiper-img(src="../../assets/images/rectangle 15.png")
+          .main__slider-text
+            p.main__slider-text--bold Slider title
+            p.main__slider-text--regular Slider subtitle
       .swiper-slide
-        img.main__slider-swiper-img(src="../../assets/images/andrea-davis-VOWXF7lsAN0-unsplash.jpg")
-
+        .main__slider-container
+          img.main__slider-swiper-img(src="../../assets/images/rectangle 15.png")
+          .main__slider-text
+            p.main__slider-text--bold Slider title
+            p.main__slider-text--regular Slider subtitle
 
 
