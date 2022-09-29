@@ -12,12 +12,12 @@ header.header
 
             a.header__location(href='') 
                 +svg('map-pin') 
-                span.header__location-city Санкт-Петербург
+                span.header__location-city New York
 
 
 
             .header__search-container
-                input.header__search-input(type='text' placeholder='Поиск...')
+                input.header__search-input(type='text' placeholder='Search...')
                 +svg('search')
 
             a.header__link-item.header__search-mobile(href="#" target="_blank")
@@ -25,13 +25,13 @@ header.header
 
             a.header__link-item.header__working-plan(href="#" target="_blank")
                 +svg('plan')
-                span.header__working-plan-title План работ
+                span.header__working-plan-title Selected services
 
             a.header__link-item.header__favorites(href="#" target="_blank")
                 +svg('heart-stroke')
-                span.header__favorites-title Избранное
+                span.header__favorites-title Favorites
 
-            button.header__log-in-btn Войти
+            button.header__log-in-btn Log in
             
 
         .header__navigation-container
@@ -42,40 +42,40 @@ header.header
                     +svg('grid-stroke', ' hamburer-btn--mobile') 
                     
    
-                    .span Каталог
+                    .span Catalog
                     +svg('chevron-right', ' hamburer-shevron--mobile')
                 a.navigation__item--mobile.navigation__registration-mobile(href="#") 
                     +svg('user')
-                    | Вход и регистрация
+                    | Log in / register
                 a.navigation__item--mobile.navigation__favorites-mobile(href="#") 
                     +svg('heart-stroke')
-                    | Избранное
+                    | Favorites
                 a.navigation__item--mobile.navigation__plan-mobile(href="#") 
                     +svg('plan')
-                    | План работ
+                    | Selected services
                 a.navigation__item--mobile.navigation__location-mobile(href="#") 
                     +svg('map-pin')
-                    | Санкт-Петербург
-                a.navigation__item(href="#") Кухня
-                a.navigation__item(href="#") Прихожая
-                a.navigation__item(href="#") Ванная
-                a.navigation__item(href="#") Гостиная
-                a.navigation__item(href="#") Спальня
+                    | New York
+                a.navigation__item(href="#") Kitchen
+                a.navigation__item(href="#") Hallway
+                a.navigation__item(href="#") Bathroom
+                a.navigation__item(href="#") Living room
+                a.navigation__item(href="#") Bedroom
 
             .header__mobile-footer
-                a.header__mobile-footer-item(href="#" target="_blank") Контакты
-                a.header__mobile-footer-item(href="#" target="_blank") Сотрудничество
-                a.header__mobile-footer-item(href="#" target="_blank") Политика конфиденциальности
-                a.header__mobile-footer-item(href="#" target="_blank") Правила пользования
-                p.header__mobile-footer-copyright © 2021, Про Ремонт
+                a.header__mobile-footer-item(href="#" target="_blank") Our contacts
+                a.header__mobile-footer-item(href="#" target="_blank") Work with us
+                a.header__mobile-footer-item(href="#" target="_blank") Privacy policy
+                a.header__mobile-footer-item(href="#" target="_blank") User agreement
+                p.header__mobile-footer-copyright © 2021, Copyright name
 
 
         .header__location-popup 
             .header__location-popup-question-container
                 +svg('map-pin', ' header__location-popup-svg')
-                p.header__location-popup-question Ваш город&nbsp;
-                    span Санкт-Петербург
+                p.header__location-popup-question Are you currently in &nbsp;
+                    span New York
                 | ?
             .header__location-buttons-container
-                button.header__location-button-submit Да, верно
-                button.header__location-button-change Выбрать другой
+                button.header__location-button-submit Yes
+                button.header__location-button-change Choose another city
